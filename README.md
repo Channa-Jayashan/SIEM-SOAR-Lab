@@ -21,8 +21,7 @@ A home lab implementation of SIEM/SOAR for log collection and incident response 
 | Network Topology | pfSense (WAN bridged to WiFi, LAN internal), Ubuntu/Windows/Kali on internal net. | Same, but using VMware's Bridged (for WAN to mobile hotspot) and VMnet (custom internal for LAN). pfSense gateway: 192.168.1.1. Ubuntu IP: 192.168.1.101 (ens33 interface). Internet routing: Traceroute shows mobile hotspot at 192.168.25.2. |
 | VMs | pfSense, Ubuntu Server, Windows 10, Kali. | Created in VMware: Kali (powered on), pfSense (powered on), Ubuntu Server 64-bit (powered on, hostname: siemserver, user: specxy), Windows 10 x64 (powered off during log capture). Allocated RAM: ~4GB Ubuntu, 2GB others. |
 
-![VMware VMs Overview](screenshots/vmware-vms-overview.png)
-![GitHub Repo Initial State](screenshots/github-repo-initial.png)
+![VMware VMs Overview](screenshots/vmware-vms-overview.jpg)
 
 ### Detailed Steps and Commands
 Accessed Ubuntu VM via SSH from host: `ssh specxy@192.168.1.101` (note: Log shows initial connect to .102 – possibly a prior DHCP lease; updated to .101).
@@ -37,10 +36,14 @@ Accessed Ubuntu VM via SSH from host: `ssh specxy@192.168.1.101` (note: Log show
    - Installed pfSense CE (latest AMD64 ISO).
    - Web GUI: https://192.168.1.1 (admin/pfsense).
    - Rules: WAN outbound allow all (with logging); LAN allow HTTP/HTTPS to Elastic ports (9200, 5601).
+![pfSense Dashboard](screenshots/pfSense-dashboard.jpg)
 
 3. **Ubuntu Setup with Elastic Stack**:
    - Installed Ubuntu Server, enabled OpenSSH.
    - Updated system and installed Java:
+![Elasticsearch Status](screenshots/Elasticsearch-status.jpg)
+![Kibana and Filebeat Status](screenshots/Kibana_Filebeat-status.jpg)
+![Kibana Dashboard](screenshots/Kibana_Dashboard.jpg)
 
 sudo apt update && sudo apt upgrade -y
 sudo apt install default-jdk
@@ -70,8 +73,8 @@ sudo /usr/share/elasticsearch/bin/elasticsearch-setup-passwords auto
 - Verification: `curl -X GET "http://localhost:9200"` (initially failed due to config; resolved after edits). Status checks show services running (e.g., Elasticsearch active since Aug 27, 2025).
 - Filebeat config: Edited `/etc/filebeat/filebeat.yml` for system modules and Elasticsearch output.
 
-![Ubuntu IP Config](screenshots/ubuntu-ip-a.png)  
-![Elasticsearch Status](screenshots/elasticsearch-status.png)
+![Ubuntu IP Config](screenshots/UbuntuServer-terminal-ip_a.jpg)  
+![Elasticsearch Status](screenshots/Elasticsearch-status.jpg)
 
 4. **Windows 10 with Sysmon**:
 - Installed Windows 10 x64.
@@ -85,7 +88,7 @@ sudo /usr/share/elasticsearch/bin/elasticsearch-setup-passwords auto
 - SSH fingerprint warning resolved with 'yes'.
 - Curl to Elasticsearch initially empty (fixed by config edits and restart).
 - Internet connectivity: VMs route through pfSense to mobile hotspot; traceroute timeouts beyond hotspot normal for mobile networks.
-- Full SSH log: See [logs/week1-2-ssh-logs.txt](logs/week1-2-ssh-logs.txt) for raw commands (truncated sections summarized here).
+- Full SSH log: See [logs/week1-2-ssh-logs.txt](logs/week1-2-ssh-CommandLogs.txt) for raw commands (truncated sections summarized here).
 - Resources Used: Elastic.co docs, VMware tutorials (instead of VirtualBox).
 
 ## Upcoming Sections
