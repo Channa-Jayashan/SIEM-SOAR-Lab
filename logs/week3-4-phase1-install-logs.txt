@@ -1,0 +1,2561 @@
+Microsoft Windows [Version 10.0.26100.4946]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Windows\System32>ssh specxy@192.168.1.101
+specxy@192.168.1.101's password:
+Welcome to Ubuntu 24.04.3 LTS (GNU/Linux 6.8.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Sat Aug 30 08:02:15 AM UTC 2025
+
+  System load:  0.04               Processes:              309
+  Usage of /:   55.5% of 18.53GB   Users logged in:        1
+  Memory usage: 80%                IPv4 address for ens33: 192.168.1.101
+  Swap usage:   20%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Fri Aug 29 04:15:51 2025 from 192.168.1.3
+specxy@siemserver:~$ sudo apt update && sudo apt upgrade
+[sudo] password for specxy:
+Get:1 https://artifacts.elastic.co/packages/8.x/apt stable InRelease [3,248 B]
+Get:2 https://artifacts.elastic.co/packages/8.x/apt stable/main amd64 Packages [87.9 kB]
+Get:3 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Hit:4 http://lk.archive.ubuntu.com/ubuntu noble InRelease
+Get:5 http://lk.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1,106 kB]
+Get:7 http://lk.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:8 http://lk.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1,379 kB]
+Get:9 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [190 kB]
+Get:10 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [21.5 kB]
+Get:11 http://security.ubuntu.com/ubuntu noble-security/main amd64 c-n-f Metadata [8,708 B]
+Get:12 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1,685 kB]
+Get:13 http://lk.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [272 kB]
+Get:14 http://lk.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [175 kB]
+Get:15 http://lk.archive.ubuntu.com/ubuntu noble-updates/main amd64 c-n-f Metadata [14.9 kB]
+Get:16 http://lk.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1,785 kB]
+Get:17 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [377 kB]
+Get:18 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [208 B]
+Get:19 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [881 kB]
+Get:20 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [52.3 kB]
+Get:21 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [208 B]
+Get:22 http://lk.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [399 kB]
+Get:23 http://lk.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+Get:24 http://lk.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1,473 kB]
+Get:25 http://lk.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [297 kB]
+Get:26 http://lk.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [377 kB]
+Get:27 http://lk.archive.ubuntu.com/ubuntu noble-updates/universe amd64 c-n-f Metadata [30.5 kB]
+Get:28 http://lk.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Get:29 http://lk.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7,072 B]
+Get:30 http://lk.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+Get:31 http://lk.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [19.2 kB]
+Get:32 http://lk.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Fetched 11.0 MB in 11s (1,022 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+7 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following upgrades have been deferred due to phasing:
+  fwupd libfwupd2
+The following packages will be upgraded:
+  elasticsearch filebeat kibana libudisks2-0 udisks2
+5 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+2 standard LTS security updates
+Need to get 1,101 MB of archives.
+After this operation, 365 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 https://artifacts.elastic.co/packages/8.x/apt stable/main amd64 elasticsearch amd64 8.19.3 [655 MB]
+Get:2 http://lk.archive.ubuntu.com/ubuntu noble-updates/main amd64 udisks2 amd64 2.10.1-6ubuntu1.3 [297 kB]
+Get:3 http://lk.archive.ubuntu.com/ubuntu noble-updates/main amd64 libudisks2-0 amd64 2.10.1-6ubuntu1.3 [175 kB]
+Get:4 https://artifacts.elastic.co/packages/8.x/apt stable/main amd64 kibana amd64 8.19.3 [380 MB]
+Get:5 https://artifacts.elastic.co/packages/8.x/apt stable/main amd64 filebeat amd64 8.19.3 [66.1 MB]
+Fetched 1,101 MB in 3min 32s (5,186 kB/s)
+(Reading database ... 255598 files and directories currently installed.)
+Preparing to unpack .../elasticsearch_8.19.3_amd64.deb ...
+Unpacking elasticsearch (8.19.3) over (8.19.2) ...
+Preparing to unpack .../kibana_8.19.3_amd64.deb ...
+Stopping kibana service... OK
+Unpacking kibana (8.19.3) over (8.19.2) ...
+Preparing to unpack .../udisks2_2.10.1-6ubuntu1.3_amd64.deb ...
+Unpacking udisks2 (2.10.1-6ubuntu1.3) over (2.10.1-6ubuntu1.2) ...
+Preparing to unpack .../libudisks2-0_2.10.1-6ubuntu1.3_amd64.deb ...
+Unpacking libudisks2-0:amd64 (2.10.1-6ubuntu1.3) over (2.10.1-6ubuntu1.2) ...
+Preparing to unpack .../filebeat_8.19.3_amd64.deb ...
+Unpacking filebeat (8.19.3) over (8.19.2) ...
+Setting up elasticsearch (8.19.3) ...
+Installing new version of config file /etc/elasticsearch/jvm.options ...
+Setting up kibana (8.19.3) ...
+Restarting kibana service... OK
+Setting up filebeat (8.19.3) ...
+Setting up libudisks2-0:amd64 (2.10.1-6ubuntu1.3) ...
+Setting up udisks2 (2.10.1-6ubuntu1.3) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for dbus (1.14.10-4ubuntu4.1) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.5) ...
+Scanning processes...
+Scanning candidates...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+Restarting services...
+ systemctl restart elasticsearch.service filebeat.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+specxy@siemserver:~$ curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | sudo gpg --dearmor -o /usr/share/keyrings/wazuh.gpg
+echo "deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main" | sudo tee /etc/apt/sources.list.d/wazuh.list
+sudo apt update
+[sudo] password for specxy:
+deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main
+Hit:1 https://artifacts.elastic.co/packages/8.x/apt stable InRelease
+Get:2 https://packages.wazuh.com/4.x/apt stable InRelease [17.3 kB]
+Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease
+Get:4 https://packages.wazuh.com/4.x/apt stable/main amd64 Packages [46.8 kB]
+Hit:5 http://lk.archive.ubuntu.com/ubuntu noble InRelease
+Hit:6 http://lk.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:7 http://lk.archive.ubuntu.com/ubuntu noble-backports InRelease
+Fetched 64.0 kB in 6s (10.4 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+2 packages can be upgraded. Run 'apt list --upgradable' to see them.
+specxy@siemserver:~$ sudo apt install wazuh-manager -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Suggested packages:
+  expect
+The following NEW packages will be installed:
+  wazuh-manager
+0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
+Need to get 389 MB of archives.
+After this operation, 956 MB of additional disk space will be used.
+Get:1 https://packages.wazuh.com/4.x/apt stable/main amd64 wazuh-manager amd64 4.12.0-1 [389 MB]
+Fetched 389 MB in 1min 9s (5,604 kB/s)
+Selecting previously unselected package wazuh-manager.
+(Reading database ... 254330 files and directories currently installed.)
+Preparing to unpack .../wazuh-manager_4.12.0-1_amd64.deb ...
+Unpacking wazuh-manager (4.12.0-1) ...
+Setting up wazuh-manager (4.12.0-1) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+specxy@siemserver:~$ sudo systemctl enable wazuh-manager && sudo systemctl start wazuh-manager
+Created symlink /etc/systemd/system/multi-user.target.wants/wazuh-manager.service → /usr/lib/systemd/system/wazuh-manager.service.
+specxy@siemserver:~$ sudo systemctl status wazuh-manager
+● wazuh-manager.service - Wazuh manager
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-manager.service; enabled; preset: enabled)
+     Active: active (running) since Sat 2025-08-30 09:27:33 UTC; 14s ago
+    Process: 58260 ExecStart=/usr/bin/env /var/ossec/bin/wazuh-control start (code=exited, status=0/SUCCESS)
+      Tasks: 248 (limit: 4888)
+     Memory: 830.5M (peak: 1015.3M swap: 39.1M swap peak: 39.2M)
+        CPU: 40.928s
+     CGroup: /system.slice/wazuh-manager.service
+             ├─58328 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─58368 /var/ossec/bin/wazuh-authd
+             ├─58374 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─58375 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─58378 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─58381 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─58394 /var/ossec/bin/wazuh-db
+             ├─58420 /var/ossec/bin/wazuh-execd
+             ├─58438 /var/ossec/bin/wazuh-analysisd
+             ├─58572 /var/ossec/bin/wazuh-syscheckd
+             ├─58587 /var/ossec/bin/wazuh-remoted
+             ├─58621 /var/ossec/bin/wazuh-logcollector
+             ├─58644 /var/ossec/bin/wazuh-monitord
+             └─58666 /var/ossec/bin/wazuh-modulesd
+
+Aug 30 09:27:26 siemserver env[58260]: Started wazuh-analysisd...
+Aug 30 09:27:27 siemserver env[58260]: Started wazuh-syscheckd...
+Aug 30 09:27:28 siemserver env[58260]: Started wazuh-remoted...
+Aug 30 09:27:29 siemserver env[58260]: Started wazuh-logcollector...
+Aug 30 09:27:30 siemserver env[58260]: Started wazuh-monitord...
+Aug 30 09:27:30 siemserver env[58663]: 2025/08/30 09:27:30 wazuh-modulesd:router: INFO: Loaded router module.
+Aug 30 09:27:30 siemserver env[58663]: 2025/08/30 09:27:30 wazuh-modulesd:content_manager: INFO: Loaded content_manager module.
+Aug 30 09:27:31 siemserver env[58260]: Started wazuh-modulesd...
+Aug 30 09:27:33 siemserver env[58260]: Completed.
+Aug 30 09:27:33 siemserver systemd[1]: Started wazuh-manager.service - Wazuh manager.
+specxy@siemserver:~$ ^C
+specxy@siemserver:~$ sudo apt install wazuh-indexer -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  wazuh-indexer
+0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
+Need to get 875 MB of archives.
+After this operation, 1,103 MB of additional disk space will be used.
+E: You don't have enough free space in /var/cache/apt/archives/.
+specxy@siemserver:~$ sudo poweroff
+
+Broadcast message from root@siemserver on pts/1 (Sat 2025-08-30 09:29:04 UTC):
+
+The system will power off now!
+
+specxy@siemserver:~$ client_loop: send disconnect: Connection reset
+
+C:\Windows\System32>ssh specxy@192.168.1.101
+specxy@192.168.1.101's password:
+Welcome to Ubuntu 24.04.3 LTS (GNU/Linux 6.8.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Sat Aug 30 09:32:24 AM UTC 2025
+
+  System load:  0.39               Processes:              348
+  Usage of /:   99.2% of 18.53GB   Users logged in:        0
+  Memory usage: 9%                 IPv4 address for ens33: 192.168.1.101
+  Swap usage:   0%
+
+  => / is using 99.2% of 18.53GB
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Sat Aug 30 08:02:16 2025 from 192.168.1.3
+specxy@siemserver:~$ sudo apt install wazuh-indexer -y
+[sudo] password for specxy:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  wazuh-indexer
+0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
+Need to get 875 MB of archives.
+After this operation, 1,103 MB of additional disk space will be used.
+E: You don't have enough free space in /var/cache/apt/archives/.
+specxy@siemserver:~$ lsblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda                         8:0    0   60G  0 disk
+├─sda1                      8:1    0    1M  0 part
+├─sda2                      8:2    0    2G  0 part /boot
+└─sda3                      8:3    0   38G  0 part
+  └─ubuntu--vg-ubuntu--lv 252:0    0   19G  0 lvm  /
+sr0                        11:0    1 1024M  0 rom
+specxy@siemserver:~$ sudo pvdisplay
+  --- Physical volume ---
+  PV Name               /dev/sda3
+  VG Name               ubuntu-vg
+  PV Size               <38.00 GiB / not usable 0
+  Allocatable           yes
+  PE Size               4.00 MiB
+  Total PE              9727
+  Free PE               4864
+  Allocated PE          4863
+  PV UUID               9rjcCY-VhaJ-HPDz-P1x2-zr4E-OpZA-cevU5Q
+
+specxy@siemserver:~$ sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
+  Size of logical volume ubuntu-vg/ubuntu-lv changed from <19.00 GiB (4863 extents) to <38.00 GiB (9727 extents).
+  Logical volume ubuntu-vg/ubuntu-lv successfully resized.
+specxy@siemserver:~$ sudo resize2fs /dev/ubuntu-vg/ubuntu-lv
+resize2fs 1.47.0 (5-Feb-2023)
+Filesystem at /dev/ubuntu-vg/ubuntu-lv is mounted on /; on-line resizing required
+old_desc_blocks = 3, new_desc_blocks = 5
+The filesystem on /dev/ubuntu-vg/ubuntu-lv is now 9960448 (4k) blocks long.
+
+specxy@siemserver:~$ df -h
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              416M  1.6M  414M   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   38G   19G   18G  52% /
+tmpfs                              2.1G     0  2.1G   0% /dev/shm
+tmpfs                              5.0M     0  5.0M   0% /run/lock
+/dev/sda2                          2.0G  192M  1.6G  11% /boot
+tmpfs                              416M   16K  416M   1% /run/user/1000
+specxy@siemserver:~$ lsblk
+NAME                      MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda                         8:0    0   60G  0 disk
+├─sda1                      8:1    0    1M  0 part
+├─sda2                      8:2    0    2G  0 part /boot
+└─sda3                      8:3    0   38G  0 part
+  └─ubuntu--vg-ubuntu--lv 252:0    0   38G  0 lvm  /
+sr0                        11:0    1 1024M  0 rom
+specxy@siemserver:~$ sudo apt install wazuh-indexer -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  wazuh-indexer
+0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
+Need to get 875 MB of archives.
+After this operation, 1,103 MB of additional disk space will be used.
+Get:1 https://packages.wazuh.com/4.x/apt stable/main amd64 wazuh-indexer amd64 4.12.0-1 [875 MB]
+Fetched 875 MB in 2min 34s (5,668 kB/s)
+Selecting previously unselected package wazuh-indexer.
+(Reading database ... 278333 files and directories currently installed.)
+Preparing to unpack .../wazuh-indexer_4.12.0-1_amd64.deb ...
+Running Wazuh Indexer Pre-Installation Script
+Unpacking wazuh-indexer (4.12.0-1) ...
+Setting up wazuh-indexer (4.12.0-1) ...
+Running Wazuh Indexer Post-Installation Script
+### NOT starting on installation, please execute the following statements to configure wazuh-indexer service to start automatically using systemd
+ sudo systemctl daemon-reload
+ sudo systemctl enable wazuh-indexer.service
+### You can start wazuh-indexer service by executing
+ sudo systemctl start wazuh-indexer.service
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+specxy@siemserver:~$ /etc/wazuh-indexer/opensearch.yml
+-bash: /etc/wazuh-indexer/opensearch.yml: Permission denied
+specxy@siemserver:~$ sudo /etc/wazuh-indexer/opensearch.yml
+sudo: /etc/wazuh-indexer/opensearch.yml: command not found
+specxy@siemserver:~$ nano /etc/wazuh-indexer/opensearch.yml
+specxy@siemserver:~$ specxy@siemserver:~$
+specxy@siemserver:~$ nano /etc/wazuh-indexer/opensearch.yml
+specxy@siemserver:~$
+specxy@siemserver:~$ sudo nano /etc/wazuh-indexer/opensearch.yml
+specxy@siemserver:~$ sudo systemctl enable wazuh-indexer && sudo systemctl start wazuh-indexer
+Synchronizing state of wazuh-indexer.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable wazuh-indexer
+Created symlink /etc/systemd/system/multi-user.target.wants/wazuh-indexer.service → /usr/lib/systemd/system/wazuh-indexer.service.
+Job for wazuh-indexer.service failed because the control process exited with error code.
+See "systemctl status wazuh-indexer.service" and "journalctl -xeu wazuh-indexer.service" for details.
+specxy@siemserver:~$ systemctl status wazuh-indexer.service
+× wazuh-indexer.service - wazuh-indexer
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-indexer.service; enabled; preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2025-08-30 10:01:13 UTC; 45s ago
+       Docs: https://documentation.wazuh.com
+    Process: 2602 ExecStart=/usr/share/wazuh-indexer/bin/systemd-entrypoint -p ${PID_DIR}/wazuh-indexer.pid --quiet (code=exited, status=1/FAILURE)
+   Main PID: 2602 (code=exited, status=1/FAILURE)
+        CPU: 10.501s
+
+Aug 30 10:01:13 siemserver systemd-entrypoint[2602]:         at org.opensearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:104)
+Aug 30 10:01:13 siemserver systemd-entrypoint[2602]:         at org.opensearch.cli.Command.mainWithoutErrorHandling(Command.java:138)
+Aug 30 10:01:13 siemserver systemd-entrypoint[2602]:         at org.opensearch.cli.Command.main(Command.java:101)
+Aug 30 10:01:13 siemserver systemd-entrypoint[2602]:         at org.opensearch.bootstrap.OpenSearch.main(OpenSearch.java:138)
+Aug 30 10:01:13 siemserver systemd-entrypoint[2602]:         at org.opensearch.bootstrap.OpenSearch.main(OpenSearch.java:104)
+Aug 30 10:01:13 siemserver systemd-entrypoint[2602]: For complete error details, refer to the log at /var/log/wazuh-indexer/wazuh-cluster.log
+Aug 30 10:01:13 siemserver systemd[1]: wazuh-indexer.service: Main process exited, code=exited, status=1/FAILURE
+Aug 30 10:01:13 siemserver systemd[1]: wazuh-indexer.service: Failed with result 'exit-code'.
+Aug 30 10:01:13 siemserver systemd[1]: Failed to start wazuh-indexer.service - wazuh-indexer.
+Aug 30 10:01:13 siemserver systemd[1]: wazuh-indexer.service: Consumed 10.501s CPU time.
+specxy@siemserver:~$ sudo nano /etc/wazuh-indexer/opensearch.yml
+specxy@siemserver:~$ sudo systemctl enable wazuh-indexer && sudo systemctl start wazuh-indexer
+Synchronizing state of wazuh-indexer.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable wazuh-indexer
+Job for wazuh-indexer.service failed because the control process exited with error code.
+See "systemctl status wazuh-indexer.service" and "journalctl -xeu wazuh-indexer.service" for details.
+specxy@siemserver:~$ journalctl -xeu wazuh-indexer.service
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.security.ssl.SslSettingsManager.<init>(SslSettingsManager.java:88)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.security.ssl.OpenSearchSecuritySSLPlugin.<init>(OpenSearchSecuritySSLPlugin.java:249)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.security.OpenSearchSecurityPlugin.<init>(OpenSearchSecurityPlugin.java:326)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.plugins.PluginsService.loadPlugin(PluginsService.java:809)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.plugins.PluginsService.loadBundle(PluginsService.java:757)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.plugins.PluginsService.loadBundles(PluginsService.java:551)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.plugins.PluginsService.<init>(PluginsService.java:197)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.node.Node.<init>(Node.java:524)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.node.Node.<init>(Node.java:451)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:242)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.bootstrap.Bootstrap.setup(Bootstrap.java:242)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.bootstrap.Bootstrap.init(Bootstrap.java:404)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.bootstrap.OpenSearch.init(OpenSearch.java:181)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.bootstrap.OpenSearch.execute(OpenSearch.java:172)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:104)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.cli.Command.mainWithoutErrorHandling(Command.java:138)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.cli.Command.main(Command.java:101)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.bootstrap.OpenSearch.main(OpenSearch.java:138)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]:         at org.opensearch.bootstrap.OpenSearch.main(OpenSearch.java:104)
+Aug 30 10:02:35 siemserver systemd-entrypoint[2958]: For complete error details, refer to the log at /var/log/wazuh-indexer/wazuh-cluster.log
+Aug 30 10:02:35 siemserver systemd[1]: wazuh-indexer.service: Main process exited, code=exited, status=1/FAILURE
+░░ Subject: Unit process exited
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░
+░░ An ExecStart= process belonging to unit wazuh-indexer.service has exited.
+░░
+░░ The process' exit code is 'exited' and its exit status is 1.
+Aug 30 10:02:35 siemserver systemd[1]: wazuh-indexer.service: Failed with result 'exit-code'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░
+░░ The unit wazuh-indexer.service has entered the 'failed' state with result 'exit-code'.
+Aug 30 10:02:35 siemserver systemd[1]: Failed to start wazuh-indexer.service - wazuh-indexer.
+░░ Subject: A start job for unit wazuh-indexer.service has failed
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░
+░░ A start job for unit wazuh-indexer.service has finished with a failure.
+░░
+░░ The job identifier is 1719 and the job result is failed.
+Aug 30 10:02:35 siemserver systemd[1]: wazuh-indexer.service: Consumed 8.209s CPU time.
+░░ Subject: Resources consumed by unit runtime
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░
+░░ The unit wazuh-indexer.service completed and consumed the indicated resources.
+
+specxy@siemserver:~$ sudo nano /etc/wazuh-indexer/opensearch.yml
+specxy@siemserver:~$ sudo chown -R wazuh-indexer:wazuh-indexer /etc/wazuh-indexer/certs
+chown: cannot access '/etc/wazuh-indexer/certs': No such file or directory
+specxy@siemserver:~$ sudo chown -R wazuh-indexer:wazuh-indexer /etc/wazuh-indexer/certs
+chown: cannot access '/etc/wazuh-indexer/certs': No such file or directory
+specxy@siemserver:~$ sudo nano /etc/wazuh-indexer/opensearch.yml
+specxy@siemserver:~$ ls -l /etc/wazuh-indexer/certs/
+ls: cannot access '/etc/wazuh-indexer/certs/': Permission denied
+specxy@siemserver:~$ sudo ls -l /etc/wazuh-indexer/certs/
+ls: cannot access '/etc/wazuh-indexer/certs/': No such file or directory
+specxy@siemserver:~$ client_loop: send disconnect: Connection reset
+
+C:\Windows\System32>
+C:\Windows\System32>
+C:\Windows\System32>
+C:\Windows\System32>ssh specxy@192.168.1.101
+specxy@192.168.1.101's password:
+Welcome to Ubuntu 24.04.3 LTS (GNU/Linux 6.8.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon Sep  1 04:25:46 AM UTC 2025
+
+  System load:  0.0                Processes:              304
+  Usage of /:   52.3% of 37.23GB   Users logged in:        1
+  Memory usage: 11%                IPv4 address for ens33: 192.168.1.101
+  Swap usage:   0%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+2 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Sat Aug 30 09:32:40 2025 from 192.168.1.3
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:00:ab:1f brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.1.101/24 brd 192.168.1.255 scope global ens33
+       valid_lft forever preferred_lft forever
+    inet6 fe80::20c:29ff:fe00:ab1f/64 scope link
+       valid_lft forever preferred_lft forever
+specxy@siemserver:~$ ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=127 time=83.1 ms
+^C
+--- 8.8.8.8 ping statistics ---
+2 packets transmitted, 1 received, 50% packet loss, time 1001ms
+rtt min/avg/max/mdev = 83.090/83.090/83.090/0.000 ms
+specxy@siemserver:~$ traceroute 8.8.8.8
+traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets
+ 1  _gateway (192.168.1.1)  2.105 ms  1.975 ms  1.926 ms
+ 2  192.168.25.2 (192.168.25.2)  3.991 ms  3.945 ms  3.869 ms^C
+specxy@siemserver:~$ sudo systemctl status elasticsearch.service
+[sudo] password for specxy:
+× elasticsearch.service - Elasticsearch
+     Loaded: loaded (/usr/lib/systemd/system/elasticsearch.service; enabled; preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2025-08-30 09:31:26 UTC; 1 day 18h ago
+       Docs: https://www.elastic.co
+   Main PID: 1402 (code=exited, status=70)
+        CPU: 4.954s
+
+Notice: journal has been rotated since unit was started, output may be incomplete.
+specxy@siemserver:~$ sudo systemctl status kibana.service
+× kibana.service - Kibana
+     Loaded: loaded (/usr/lib/systemd/system/kibana.service; enabled; preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2025-08-30 09:31:43 UTC; 1 day 18h ago
+   Duration: 1.974s
+       Docs: https://www.elastic.co
+   Main PID: 1639 (code=exited, status=1/FAILURE)
+        CPU: 2.539s
+
+Notice: journal has been rotated since unit was started, output may be incomplete.
+specxy@siemserver:~$ sudo systemctl status filebeat.service
+● filebeat.service - Filebeat sends log files to Logstash or directly to Elasticsearch.
+     Loaded: loaded (/usr/lib/systemd/system/filebeat.service; enabled; preset: enabled)
+     Active: active (running) since Sat 2025-08-30 09:31:23 UTC; 1 day 18h ago
+       Docs: https://www.elastic.co/beats/filebeat
+   Main PID: 1403 (filebeat)
+      Tasks: 13 (limit: 4888)
+     Memory: 174.2M (peak: 179.7M)
+        CPU: 7.754s
+     CGroup: /system.slice/filebeat.service
+             └─1403 /usr/share/filebeat/bin/filebeat --environment systemd -c /etc/filebeat/filebeat.yml --path.home /usr/share/filebeat --path.config /etc/filebeat --path.data /var/lib/filebeat --path.logs /va>
+
+Sep 01 04:27:07 siemserver filebeat[1403]: {"log.level":"error","@timestamp":"2025-09-01T04:27:07.909Z","log.logger":"elasticsearch.esclientleg","log.origin":{"function":"github.com/elastic/elastic-agent-libs/t>
+Sep 01 04:27:26 siemserver filebeat[1403]: {"log.level":"info","@timestamp":"2025-09-01T04:27:26.625Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/l>
+Sep 01 04:27:41 siemserver filebeat[1403]: {"log.level":"error","@timestamp":"2025-09-01T04:27:41.059Z","log.logger":"publisher_pipeline_output","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/pub>
+Sep 01 04:27:41 siemserver filebeat[1403]: {"log.level":"info","@timestamp":"2025-09-01T04:27:41.059Z","log.logger":"publisher_pipeline_output","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/publ>
+Sep 01 04:27:41 siemserver filebeat[1403]: {"log.level":"error","@timestamp":"2025-09-01T04:27:41.059Z","log.logger":"elasticsearch.esclientleg","log.origin":{"function":"github.com/elastic/elastic-agent-libs/t>
+Sep 01 04:27:56 siemserver filebeat[1403]: {"log.level":"info","@timestamp":"2025-09-01T04:27:56.624Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/l>
+Sep 01 04:28:26 siemserver filebeat[1403]: {"log.level":"info","@timestamp":"2025-09-01T04:28:26.627Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/l>
+Sep 01 04:28:35 siemserver filebeat[1403]: {"log.level":"error","@timestamp":"2025-09-01T04:28:35.577Z","log.logger":"publisher_pipeline_output","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/pub>
+Sep 01 04:28:35 siemserver filebeat[1403]: {"log.level":"info","@timestamp":"2025-09-01T04:28:35.578Z","log.logger":"publisher_pipeline_output","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/publ>
+Sep 01 04:28:35 siemserver filebeat[1403]: {"log.level":"error","@timestamp":"2025-09-01T04:28:35.580Z","log.logger":"elasticsearch.esclientleg","log.origin":{"function":"github.com/elastic/elastic-agent-libs/t>
+
+specxy@siemserver:~$ sudo systemctl start kibana.service
+specxy@siemserver:~$ sudo systemctl status kibana.service
+● kibana.service - Kibana
+     Loaded: loaded (/usr/lib/systemd/system/kibana.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 04:29:01 UTC; 4s ago
+       Docs: https://www.elastic.co
+   Main PID: 4220 (node)
+      Tasks: 11 (limit: 4888)
+     Memory: 267.0M (peak: 267.4M)
+        CPU: 4.706s
+     CGroup: /system.slice/kibana.service
+             └─4220 /usr/share/kibana/bin/../node/glibc-217/bin/node /usr/share/kibana/bin/../src/cli/dist
+
+Sep 01 04:29:01 siemserver systemd[1]: Started kibana.service - Kibana.
+Sep 01 04:29:01 siemserver kibana[4220]: Kibana is currently running with legacy OpenSSL providers enabled! For details and instructions on how to disable see https://www.elastic.co/guide/en/kibana/8.19/product>
+Sep 01 04:29:02 siemserver kibana[4220]: {"log.level":"info","@timestamp":"2025-09-01T04:29:02.319Z","log.logger":"elastic-apm-node","ecs.version":"8.10.0","agentVersion":"4.13.0","env":{"pid":4220,"proctitle":>
+Sep 01 04:29:02 siemserver kibana[4220]: Native global console methods have been overridden in production environment.
+Sep 01 04:29:03 siemserver kibana[4220]: [2025-09-01T04:29:03.402+00:00][INFO ][root] Kibana is starting
+Sep 01 04:29:03 siemserver kibana[4220]: [2025-09-01T04:29:03.435+00:00][WARN ][environment] pid file already exists at /run/kibana/kibana.pid
+Sep 01 04:29:03 siemserver kibana[4220]: [2025-09-01T04:29:03.438+00:00][INFO ][node] Kibana process configured with roles: [background_tasks, ui]
+
+specxy@siemserver:~$ sudo systemctl start elasticsearch.service
+specxy@siemserver:~$ sudo systemctl status elasticsearch.service
+● elasticsearch.service - Elasticsearch
+     Loaded: loaded (/usr/lib/systemd/system/elasticsearch.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 04:29:45 UTC; 15s ago
+       Docs: https://www.elastic.co
+   Main PID: 4246 (java)
+      Tasks: 203 (limit: 4888)
+     Memory: 2.6G (peak: 2.6G swap: 199.2M swap peak: 303.9M)
+        CPU: 1min 23.416s
+     CGroup: /system.slice/elasticsearch.service
+             ├─4246 /usr/share/elasticsearch/jdk/bin/java -Xms4m -Xmx64m -XX:+UseSerialGC -Dcli.name=server -Dcli.script=/usr/share/elasticsearch/bin/elasticsearch -Dcli.libs=lib/tools/server-cli -Des.path.home>
+             ├─4314 /usr/share/elasticsearch/jdk/bin/java -Des.networkaddress.cache.ttl=60 -Des.networkaddress.cache.negative.ttl=10 -XX:+AlwaysPreTouch -Xss1m -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dj>
+             └─4346 /usr/share/elasticsearch/modules/x-pack-ml/platform/linux-x86_64/bin/controller
+
+Sep 01 04:29:19 siemserver systemd[1]: Starting elasticsearch.service - Elasticsearch...
+Sep 01 04:29:45 siemserver systemd[1]: Started elasticsearch.service - Elasticsearch.
+
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$ sudo systemctl enable wazuh-indexer && sudo systemctl start wazuh-indexer
+[sudo] password for specxy:
+Synchronizing state of wazuh-indexer.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable wazuh-indexer
+Job for wazuh-indexer.service failed because the control process exited with error code.
+See "systemctl status wazuh-indexer.service" and "journalctl -xeu wazuh-indexer.service" for details.
+specxy@siemserver:~$ systemctl status wazuh-indexer.service
+× wazuh-indexer.service - wazuh-indexer
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-indexer.service; enabled; preset: enabled)
+     Active: failed (Result: exit-code) since Mon 2025-09-01 05:13:32 UTC; 27s ago
+       Docs: https://documentation.wazuh.com
+    Process: 4744 ExecStart=/usr/share/wazuh-indexer/bin/systemd-entrypoint -p ${PID_DIR}/wazuh-indexer.pid --quiet (code=exited, status=1/FAILURE)
+   Main PID: 4744 (code=exited, status=1/FAILURE)
+        CPU: 11.976s
+
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:104)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.cli.Command.mainWithoutErrorHandling(Command.java:138)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.cli.Command.main(Command.java:101)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.bootstrap.OpenSearch.main(OpenSearch.java:138)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.bootstrap.OpenSearch.main(OpenSearch.java:104)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]: For complete error details, refer to the log at /var/log/wazuh-indexer/wazuh-cluster.log
+Sep 01 05:13:32 siemserver systemd[1]: wazuh-indexer.service: Main process exited, code=exited, status=1/FAILURE
+Sep 01 05:13:32 siemserver systemd[1]: wazuh-indexer.service: Failed with result 'exit-code'.
+Sep 01 05:13:32 siemserver systemd[1]: Failed to start wazuh-indexer.service - wazuh-indexer.
+Sep 01 05:13:32 siemserver systemd[1]: wazuh-indexer.service: Consumed 11.976s CPU time.
+specxy@siemserver:~$ ^C
+specxy@siemserver:~$ sudo nano /etc/wazuh-indexer/opensearch.yml
+specxy@siemserver:~$ journalctl -xeu wazuh-indexer.service
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.security.ssl.SslSettingsManager.<init>(SslSettingsManager.java:88)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.security.ssl.OpenSearchSecuritySSLPlugin.<init>(OpenSearchSecuritySSLPlugin.java:249)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.security.OpenSearchSecurityPlugin.<init>(OpenSearchSecurityPlugin.java:326)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.plugins.PluginsService.loadPlugin(PluginsService.java:809)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.plugins.PluginsService.loadBundle(PluginsService.java:757)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.plugins.PluginsService.loadBundles(PluginsService.java:551)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.plugins.PluginsService.<init>(PluginsService.java:197)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.node.Node.<init>(Node.java:524)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.node.Node.<init>(Node.java:451)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:242)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.bootstrap.Bootstrap.setup(Bootstrap.java:242)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.bootstrap.Bootstrap.init(Bootstrap.java:404)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.bootstrap.OpenSearch.init(OpenSearch.java:181)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.bootstrap.OpenSearch.execute(OpenSearch.java:172)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:104)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.cli.Command.mainWithoutErrorHandling(Command.java:138)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.cli.Command.main(Command.java:101)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.bootstrap.OpenSearch.main(OpenSearch.java:138)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]:         at org.opensearch.bootstrap.OpenSearch.main(OpenSearch.java:104)
+Sep 01 05:13:32 siemserver systemd-entrypoint[4744]: For complete error details, refer to the log at /var/log/wazuh-indexer/wazuh-cluster.log
+Sep 01 05:13:32 siemserver systemd[1]: wazuh-indexer.service: Main process exited, code=exited, status=1/FAILURE
+░░ Subject: Unit process exited
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░
+░░ An ExecStart= process belonging to unit wazuh-indexer.service has exited.
+░░
+░░ The process' exit code is 'exited' and its exit status is 1.
+Sep 01 05:13:32 siemserver systemd[1]: wazuh-indexer.service: Failed with result 'exit-code'.
+░░ Subject: Unit failed
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░
+░░ The unit wazuh-indexer.service has entered the 'failed' state with result 'exit-code'.
+Sep 01 05:13:32 siemserver systemd[1]: Failed to start wazuh-indexer.service - wazuh-indexer.
+░░ Subject: A start job for unit wazuh-indexer.service has failed
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░
+░░ A start job for unit wazuh-indexer.service has finished with a failure.
+░░
+░░ The job identifier is 5024 and the job result is failed.
+Sep 01 05:13:32 siemserver systemd[1]: wazuh-indexer.service: Consumed 11.976s CPU time.
+░░ Subject: Resources consumed by unit runtime
+░░ Defined-By: systemd
+░░ Support: http://www.ubuntu.com/support
+░░
+░░ The unit wazuh-indexer.service completed and consumed the indicated resources.
+
+specxy@siemserver:~$ sudo nano /etc/wazuh-indexer/opensearch.yml
+specxy@siemserver:~$ ls -l /etc/wazuh-indexer/certs/
+ls: cannot access '/etc/wazuh-indexer/certs/': Permission denied
+specxy@siemserver:~$ sudo ls -l /etc/wazuh-indexer/certs/
+ls: cannot access '/etc/wazuh-indexer/certs/': No such file or directory
+specxy@siemserver:~$ cd /usr/share/wazuh-indexer/bin/
+-bash: cd: /usr/share/wazuh-indexer/bin/: Permission denied
+specxy@siemserver:~$ sudo cd /usr/share/wazuh-indexer/bin/
+sudo: cd: command not found
+sudo: "cd" is a shell built-in command, it cannot be run directly.
+sudo: the -s option may be used to run a privileged shell.
+sudo: the -D option may be used to run a command in a specific directory.
+specxy@siemserver:~$ cd /usr/
+specxy@siemserver:/usr$ cd share/
+specxy@siemserver:/usr/share$ cd wazuh-indexer/
+-bash: cd: wazuh-indexer/: Permission denied
+specxy@siemserver:/usr/share$ sudo cd wazuh-indexer/
+sudo: cd: command not found
+sudo: "cd" is a shell built-in command, it cannot be run directly.
+sudo: the -s option may be used to run a privileged shell.
+sudo: the -D option may be used to run a command in a specific directory.
+specxy@siemserver:/usr/share$ sudo -s cd wazuh-indexer/
+specxy@siemserver:/usr/share$ sudo cd wazuh-indexer/ -s
+sudo: cd: command not found
+sudo: "cd" is a shell built-in command, it cannot be run directly.
+sudo: the -s option may be used to run a privileged shell.
+sudo: the -D option may be used to run a command in a specific directory.
+specxy@siemserver:/usr/share$ ls -la
+total 672
+drwxr-xr-x 143 root          root           4096 Aug 30 09:51 .
+drwxr-xr-x  12 root          root           4096 Feb 16  2025 ..
+drwxr-xr-x   2 root          root           4096 Aug 23 05:21 aclocal
+drwxr-xr-x   8 root          root           4096 Aug 23 05:21 alsa
+drwxr-xr-x   2 root          root           4096 Aug 23 05:21 application-registry
+drwxr-xr-x   2 root          root           4096 Aug 23 05:21 applications
+drwxr-xr-x   6 root          root           4096 Aug 21 05:41 apport
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 appstream
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 awk
+drwxr-xr-x   2 root          root           4096 Aug 23 05:18 base-files
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 base-passwd
+drwxr-xr-x   4 root          root           4096 Feb 16  2025 bash-completion
+drwxr-xr-x   2 root          root           4096 Aug 23 05:22 binfmts
+drwxr-xr-x   2 root          root           4096 Aug 21 05:39 bpfcc-tools
+drwxr-xr-x  39 root          root           4096 Aug 23 05:21 bug
+drwxr-xr-x   9 root          root           4096 Feb 16  2025 byobu
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 ca-certificates
+drwxr-xr-x   2 root          root           4096 Aug 23 05:21 ca-certificates-java
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 cmake
+drwxr-xr-x   2 root          root           4096 Aug 23 05:18 common-licenses
+drwxr-xr-x   2 root          root          32768 Feb 16  2025 consolefonts
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 console-setup
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 consoletrans
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 cryptsetup
+drwxr-xr-x   8 root          root           4096 Aug 23 05:21 dbus-1
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 debconf
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 debhelper
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 debianutils
+drwxr-xr-x   3 root          root           4096 Aug 23 05:21 defaults
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 dhcpcd
+drwxr-xr-x   2 root          root           4096 Apr 22  2024 dict
+drwxr-xr-x   2 root          root           4096 Aug 23 05:18 distro-info
+drwxr-xr-x 805 root          root          36864 Aug 30 09:51 doc
+drwxr-xr-x   2 root          root           4096 Aug 23 05:21 doc-base
+-rw-r--r--   1 root          root           3106 Aug  1 14:21 dot.bashrc
+-rw-r--r--   1 root          root            161 Aug  1 14:21 dot.profile
+-rw-r--r--   1 root          root             72 Aug  1 14:21 dot.profile.md5sums
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 dpkg
+drwxr-xr-x   2 root          root           4096 Aug 23 05:21 drirc.d
+drwxr-xr-x   9 root          root           4096 Aug 30 08:06 elasticsearch
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 file
+drwxr-xr-x   5 root          root           4096 Aug 30 08:07 filebeat
+drwxr-xr-x   2 root          root           4096 Aug 23 05:18 finalrd
+drwxr-xr-x   4 root          root           4096 Feb 16  2025 fish
+drwxr-xr-x   3 root          root           4096 Aug 21 05:39 fontconfig
+drwxr-xr-x   3 root          root           4096 Aug 21 05:39 fonts
+drwxr-xr-x   6 root          root           4096 Aug 23 05:18 fwupd
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 gcc
+drwxr-xr-x   3 root          root           4096 Aug 23 05:21 GConf
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 gdb
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 gettext
+drwxr-xr-x   4 root          root           4096 Feb 16  2025 git-core
+drwxr-xr-x   3 root          root           4096 Aug 21 05:41 gitweb
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 glib-2.0
+drwxr-xr-x   2 root          root           4096 Aug 21 05:41 gnupg
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 groff
+drwxr-xr-x   3 root          root           4096 Aug 21 05:36 grub
+drwxr-xr-x   3 root          root           4096 Aug 21 05:36 grub-gfxpayload-lists
+drwxr-xr-x   3 root          root           4096 Aug 23 05:21 gtk-3.0
+drwxr-xr-x   2 root          root           4096 Aug 21 05:39 hwdata
+drwxr-xr-x   4 root          root           4096 Aug 21 05:39 i18n
+drwxr-xr-x  12 root          root           4096 Aug 23 05:21 icons
+drwxr-xr-x   2 root          root           4096 Aug 21 05:39 ieee-data
+drwxr-xr-x   2 root          root           4096 Aug 23 05:18 info
+-rw-r--r--   1 root          root            771 Aug  1 14:21 info.dir
+drwxr-xr-x   8 root          root           4096 Aug 23 05:18 initramfs-tools
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 installed-tests
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 iptables
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 iso-codes
+drwxr-xr-x   2 root          root           4096 Aug 23 05:21 java
+drwxr-xr-x   2 root          root           4096 Aug 30 09:23 keyrings
+drwxrwxr-x   8 root          root           4096 Aug 30 08:07 kibana
+drwxr-xr-x   2 root          root           4096 Aug 23 05:18 landscape
+drwxr-xr-x   2 root          root           4096 Aug 21 05:39 libc-bin
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 libdrm
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 libgcrypt20
+drwxr-xr-x   2 root          root           4096 Aug 23 05:21 libthai
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 licenses
+drwxr-xr-x   4 root          root           4096 Feb 16  2025 lintian
+drwxr-xr-x 198 root          root           4096 Aug 21 05:39 locale
+drwxr-xr-x   2 root          root           4096 Aug 21 05:39 locales
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 lxd-installer
+drwxr-xr-x  36 root          root           4096 Feb 16  2025 man
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 man-db
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 maven-repo
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 mdadm
+drwxr-xr-x   2 root          root           4096 Aug 23 05:21 menu
+drwxr-xr-x   2 root          root           4096 Aug 23 05:18 metainfo
+drwxr-xr-x  16 root          root           4096 Feb 16  2025 mime
+drwxr-xr-x   2 root          root           4096 Aug 23 05:21 mime-info
+drwxr-xr-x   2 root          root           4096 Aug 23 05:18 misc
+drwxr-xr-x   4 root          root           4096 Feb 16  2025 ModemManager
+-rw-r--r--   1 root          root            284 Aug  1 14:21 motd
+drwxr-xr-x   4 root          root           4096 Feb 16  2025 nano
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 needrestart
+drwxr-xr-x   3 root          root           4096 Aug 23 05:18 netplan
+-rw-r--r--   1 root          root             91 Aug  1 14:21 networks
+drwxr-xr-x   2 root          root           4096 Aug 21 05:40 openssh
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 open-vm-tools
+drwxr-xr-x   2 root          root           4096 Aug 21 05:36 os-prober
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 package-data-downloads
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 PackageKit
+drwxr-xr-x   2 root          root           4096 Aug 21 05:41 pam
+drwxr-xr-x   2 root          root           4096 Aug 23 05:18 pam-configs
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 pastebin.d
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 perl
+drwxr-xr-x  11 root          root           4096 Aug 23 05:18 perl5
+drwxr-xr-x   2 root          root           4096 Aug 23 05:21 pixmaps
+drwxr-xr-x   2 root          root           4096 Aug 23 05:21 pkgconfig
+drwxr-xr-x   3 root          root           4096 Aug 23 05:18 plymouth
+drwxr-xr-x   4 root          root           4096 Feb 16  2025 polkit-1
+-rw-r--r--   1 root          root            582 Aug  1 14:21 profile
+-rw-r--r--   1 root          root            396 Aug  1 14:21 profile.md5sums
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 publicsuffix
+drwxr-xr-x   7 root          root           4096 Feb 16  2025 python3
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 python-apt
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 python-babel-localedata
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 readline
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 rsync
+drwxr-xr-x   2 root          root           4096 Aug 23 05:18 rsyslog
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 screen
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 secureboot
+drwxr-xr-x   3 root          root           4096 Feb  4  2024 sensible-utils
+drwxr-xr-x   3 root          root           4096 Aug 23 05:21 session-migration
+drwxr-xr-x   8 root          root           4096 Aug 23 05:21 sgml
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 sgml-base
+drwxr-xr-x   2 root          root           4096 Aug 23 05:18 snapd
+-rw-r--r--   1 root          root            772 Aug  1 14:21 staff-group-for-usr-local
+drwxr-xr-x   2 root          root           4096 Aug 23 05:18 systemd
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 tabset
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 tcltk
+drwxr-xr-x  44 root          root           4096 Aug 21 05:40 terminfo
+drwxr-xr-x   4 root          root           4096 Aug 23 05:21 themes
+drwxr-xr-x   2 root          root           4096 Aug 23 05:21 thumbnailers
+drwxr-xr-x   4 root          root           4096 Aug 23 05:18 ubuntu-drivers-common
+drwxr-xr-x   2 root          root           4096 Aug 23 05:18 ubuntu-release-upgrader
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 ucf
+drwxr-xr-x   4 root          root           4096 Feb 16  2025 ufw
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 unattended-upgrades
+drwxr-xr-x   4 root          root           4096 Aug 23 05:18 update-notifier
+drwxr-xr-x   4 root          root           4096 Aug 23 05:21 upstart
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 usb_modeswitch
+drwxr-xr-x   3 root          root           4096 Apr  9  2024 util-linux
+drwxr-xr-x   5 root          root           4096 Feb 16  2025 vim
+drwxr-xr-x   5 root          root           4096 Aug 23 05:21 vulkan
+drwxr-x---   8 wazuh-indexer wazuh-indexer  4096 Aug 30 09:52 wazuh-indexer
+drwxr-xr-x   4 root          root           4096 Aug 23 05:21 X11
+drwxr-xr-x   3 root          root           4096 Feb 16  2025 xfsprogs
+drwxr-xr-x   9 root          root           4096 Aug 21 05:39 xml
+drwxr-xr-x   2 root          root           4096 Feb 16  2025 xml-core
+drwxr-xr-x  13 root          root           4096 Aug 21 05:41 zoneinfo
+drwxr-xr-x   4 root          root           4096 Feb 16  2025 zsh
+specxy@siemserver:/usr/share$ cd ~
+specxy@siemserver:~$ sudo cd /usr/share/wazuh-indexer/bin/
+sudo: cd: command not found
+sudo: "cd" is a shell built-in command, it cannot be run directly.
+sudo: the -s option may be used to run a privileged shell.
+sudo: the -D option may be used to run a command in a specific directory.
+specxy@siemserver:~$ sudo -i
+root@siemserver:~# cd /usr/share/wazuh-indexer/bin/
+root@siemserver:/usr/share/wazuh-indexer/bin# ls -la
+total 64
+drwxr-x--- 3 wazuh-indexer wazuh-indexer 4096 Aug 30 09:52 .
+drwxr-x--- 8 wazuh-indexer wazuh-indexer 4096 Aug 30 09:52 ..
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer 6028 Apr 30 10:57 indexer-security-init.sh
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer 3117 Apr 30 10:57 opensearch
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer 1090 Apr 30 10:57 opensearch-cli
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer 5494 Apr 30 10:57 opensearch-env
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer 1838 Apr 30 10:57 opensearch-env-from-file
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer  222 Apr 30 10:57 opensearch-keystore
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer  155 Apr 30 10:57 opensearch-node
+drwxr-x--- 2 wazuh-indexer wazuh-indexer 4096 Aug 30 09:52 opensearch-performance-analyzer
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer  210 Apr 30 10:57 opensearch-plugin
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer  148 Apr 30 10:57 opensearch-shard
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer  211 Apr 30 10:57 opensearch-upgrade
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer  369 Apr 30 10:57 systemd-entrypoint
+root@siemserver:/usr/share/wazuh-indexer/bin# sudo ./indexer-certs-tool.sh
+sudo: ./indexer-certs-tool.sh: command not found
+root@siemserver:/usr/share/wazuh-indexer/bin# cd ~
+root@siemserver:~# exit
+logout
+specxy@siemserver:~$ cd /tmp
+specxy@siemserver:/tmp$ curl -sO https://packages.wazuh.com/4.9/wazuh-certs-tool.sh
+specxy@siemserver:/tmp$ chmod +x wazuh-certs-tool.sh
+specxy@siemserver:/tmp$ sudo ./wazuh-certs-tool.sh
+
+NAME
+        wazuh-cert-tool.sh - Manages the creation of certificates of the Wazuh components.
+
+SYNOPSIS
+        wazuh-cert-tool.sh [OPTIONS]
+
+DESCRIPTION
+        -a,  --admin-certificates </path/to/root-ca.pem> </path/to/root-ca.key>
+                Creates the admin certificates, add root-ca.pem and root-ca.key.
+
+        -A, --all </path/to/root-ca.pem> </path/to/root-ca.key>
+                Creates certificates specified in config.yml and admin certificates. Add a root-ca.pem and root-ca.key or leave it empty so a new one will be created.
+
+        -ca, --root-ca-certificates
+                Creates the root-ca certificates.
+
+        -v,  --verbose
+                Enables verbose mode.
+
+        -wd,  --wazuh-dashboard-certificates </path/to/root-ca.pem> </path/to/root-ca.key>
+                Creates the Wazuh dashboard certificates, add root-ca.pem and root-ca.key.
+
+        -wi,  --wazuh-indexer-certificates </path/to/root-ca.pem> </path/to/root-ca.key>
+                Creates the Wazuh indexer certificates, add root-ca.pem and root-ca.key.
+
+        -ws,  --wazuh-server-certificates </path/to/root-ca.pem> </path/to/root-ca.key>
+                Creates the Wazuh server certificates, add root-ca.pem and root-ca.key.
+
+        -tmp,  --cert_tmp_path </path/to/tmp_dir>
+                Modifies the default tmp directory (/tmp/wazuh-ceritificates) to the specified one.
+                Must be used along with one of these options: -a, -A, -ca, -wi, -wd, -ws
+
+specxy@siemserver:/tmp$ sudo ./wazuh-certs-tool.sh -A
+01/09/2025 06:07:21 INFO: Verbose logging redirected to /tmp/wazuh-certificates-tool.log
+01/09/2025 06:07:21 ERROR: No configuration file found.
+specxy@siemserver:/tmp$ sudo i
+sudo: i: command not found
+specxy@siemserver:/tmp$ sudo -i
+root@siemserver:~# cd tem
+-bash: cd: tem: No such file or directory
+root@siemserver:~# cd /tmp/
+root@siemserver:/tmp# move ./wazuh-cert
+wazuh-certificates/          wazuh-certificates-tool.log  wazuh-certs-tool.sh
+root@siemserver:/tmp# cd wazuh-certificates/
+root@siemserver:/tmp/wazuh-certificates# ls -ls
+total 0
+root@siemserver:/tmp/wazuh-certificates# ls -la
+total 8
+drwxr--r--  2 root root 4096 Sep  1 06:07 .
+drwxrwxrwt 17 root root 4096 Sep  1 06:10 ..
+root@siemserver:/tmp/wazuh-certificates# cd ..
+root@siemserver:/tmp# move ./wazuh-certs-tool.sh /usr/share/wazuh-indexer/bin/
+Command 'move' not found, did you mean:
+  command 'love' from snap love (11.2+pkg-d332)
+  command 'mote' from snap mote (2.0.5)
+  command 'movx' from snap movx (2.0.1)
+  command 'more' from deb util-linux (2.39.3-9ubuntu6.3)
+  command 'lmove' from deb suck (4.3.4-1build1)
+  command 'mmove' from deb mtools (4.0.43-1)
+  command 'love' from deb love (11.4-1)
+  command 'jove' from deb jove (4.17.5.3-1)
+See 'snap info <snapname>' for additional versions.
+root@siemserver:/tmp# cp ./wazuh-certs-tool.sh /usr/share/wazuh-indexer/bin/
+root@siemserver:/tmp# cd /usr/share/wazuh-indexer/bin/
+root@siemserver:/usr/share/wazuh-indexer/bin# sudo ./indexer-certs-tool.sh
+sudo: ./indexer-certs-tool.sh: command not found
+root@siemserver:/usr/share/wazuh-indexer/bin# ls -la
+total 100
+drwxr-x--- 3 wazuh-indexer wazuh-indexer  4096 Sep  1 06:11 .
+drwxr-x--- 8 wazuh-indexer wazuh-indexer  4096 Aug 30 09:52 ..
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer  6028 Apr 30 10:57 indexer-security-init.sh
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer  3117 Apr 30 10:57 opensearch
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer  1090 Apr 30 10:57 opensearch-cli
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer  5494 Apr 30 10:57 opensearch-env
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer  1838 Apr 30 10:57 opensearch-env-from-file
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer   222 Apr 30 10:57 opensearch-keystore
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer   155 Apr 30 10:57 opensearch-node
+drwxr-x--- 2 wazuh-indexer wazuh-indexer  4096 Aug 30 09:52 opensearch-performance-analyzer
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer   210 Apr 30 10:57 opensearch-plugin
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer   148 Apr 30 10:57 opensearch-shard
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer   211 Apr 30 10:57 opensearch-upgrade
+-rwxr-x--- 1 wazuh-indexer wazuh-indexer   369 Apr 30 10:57 systemd-entrypoint
+-rwxr-xr-x 1 root          root          36475 Sep  1 06:11 wazuh-certs-tool.sh
+root@siemserver:/usr/share/wazuh-indexer/bin# sudo ./indexer-certs-tool.sh -A
+sudo: ./indexer-certs-tool.sh: command not found
+root@siemserver:/usr/share/wazuh-indexer/bin# sudo ./wazuh-certs-tool.sh -A
+01/09/2025 06:16:20 INFO: Verbose logging redirected to /usr/share/wazuh-indexer/bin/wazuh-certificates-tool.log
+01/09/2025 06:16:20 ERROR: No configuration file found.
+root@siemserver:/usr/share/wazuh-indexer/bin# cd /tmp/
+root@siemserver:/tmp# sudo ./wazuh-certs-tool.sh -A
+01/09/2025 06:20:14 INFO: Verbose logging redirected to /tmp/wazuh-certificates-tool.log
+01/09/2025 06:20:14 ERROR: No configuration file found.
+root@siemserver:/tmp# cat ./wazuh-certificates-tool.log
+01/09/2025 06:07:21 INFO: Verbose logging redirected to /tmp/wazuh-certificates-tool.log
+01/09/2025 06:07:21 ERROR: No configuration file found.
+01/09/2025 06:20:14 INFO: Verbose logging redirected to /tmp/wazuh-certificates-tool.log
+01/09/2025 06:20:14 ERROR: No configuration file found.
+root@siemserver:/tmp# sudo ./wazuh-certs-tool.sh
+
+NAME
+        wazuh-cert-tool.sh - Manages the creation of certificates of the Wazuh components.
+
+SYNOPSIS
+        wazuh-cert-tool.sh [OPTIONS]
+
+DESCRIPTION
+        -a,  --admin-certificates </path/to/root-ca.pem> </path/to/root-ca.key>
+                Creates the admin certificates, add root-ca.pem and root-ca.key.
+
+        -A, --all </path/to/root-ca.pem> </path/to/root-ca.key>
+                Creates certificates specified in config.yml and admin certificates. Add a root-ca.pem and root-ca.key or leave it empty so a new one will be created.
+
+        -ca, --root-ca-certificates
+                Creates the root-ca certificates.
+
+        -v,  --verbose
+                Enables verbose mode.
+
+        -wd,  --wazuh-dashboard-certificates </path/to/root-ca.pem> </path/to/root-ca.key>
+                Creates the Wazuh dashboard certificates, add root-ca.pem and root-ca.key.
+
+        -wi,  --wazuh-indexer-certificates </path/to/root-ca.pem> </path/to/root-ca.key>
+                Creates the Wazuh indexer certificates, add root-ca.pem and root-ca.key.
+
+        -ws,  --wazuh-server-certificates </path/to/root-ca.pem> </path/to/root-ca.key>
+                Creates the Wazuh server certificates, add root-ca.pem and root-ca.key.
+
+        -tmp,  --cert_tmp_path </path/to/tmp_dir>
+                Modifies the default tmp directory (/tmp/wazuh-ceritificates) to the specified one.
+                Must be used along with one of these options: -a, -A, -ca, -wi, -wd, -ws
+
+root@siemserver:/tmp# sudo ./wazuh-certs-tool.sh -v
+01/09/2025 06:23:08 INFO: Verbose logging redirected to /tmp/wazuh-certificates-tool.log
+01/09/2025 06:23:08 DEBUG: Reading configuration file.
+01/09/2025 06:23:08 ERROR: No configuration file found.
+root@siemserver:/tmp# sudo ./wazuh-certs-tool.sh -v -a
+01/09/2025 06:23:14 ERROR: Error on arguments. Probably missing </path/to/root-ca.pem> </path/to/root-ca.key> after -a|--admin-certificates
+
+NAME
+        wazuh-cert-tool.sh - Manages the creation of certificates of the Wazuh components.
+
+SYNOPSIS
+        wazuh-cert-tool.sh [OPTIONS]
+
+DESCRIPTION
+        -a,  --admin-certificates </path/to/root-ca.pem> </path/to/root-ca.key>
+                Creates the admin certificates, add root-ca.pem and root-ca.key.
+
+        -A, --all </path/to/root-ca.pem> </path/to/root-ca.key>
+                Creates certificates specified in config.yml and admin certificates. Add a root-ca.pem and root-ca.key or leave it empty so a new one will be created.
+
+        -ca, --root-ca-certificates
+                Creates the root-ca certificates.
+
+        -v,  --verbose
+                Enables verbose mode.
+
+        -wd,  --wazuh-dashboard-certificates </path/to/root-ca.pem> </path/to/root-ca.key>
+                Creates the Wazuh dashboard certificates, add root-ca.pem and root-ca.key.
+
+        -wi,  --wazuh-indexer-certificates </path/to/root-ca.pem> </path/to/root-ca.key>
+                Creates the Wazuh indexer certificates, add root-ca.pem and root-ca.key.
+
+        -ws,  --wazuh-server-certificates </path/to/root-ca.pem> </path/to/root-ca.key>
+                Creates the Wazuh server certificates, add root-ca.pem and root-ca.key.
+
+        -tmp,  --cert_tmp_path </path/to/tmp_dir>
+                Modifies the default tmp directory (/tmp/wazuh-ceritificates) to the specified one.
+                Must be used along with one of these options: -a, -A, -ca, -wi, -wd, -ws
+
+root@siemserver:/tmp# cd~
+Command 'cd~' not found, did you mean:
+  command 'cdb' from deb tinycdb (0.81-1)
+  command 'cd5' from deb cd5 (0.1-4)
+  command 'cdp' from deb irpas (0.10-9)
+  command 'cdw' from deb cdw (0.8.1-3)
+  command 'cde' from deb cde (0.1+git9-g551e54d-1.2)
+  command 'cdo' from deb cdo (2.3.0-1)
+  command 'cdi' from deb cdo (2.3.0-1)
+Try: apt install <deb name>
+root@siemserver:/tmp# cd ~
+root@siemserver:~# sudo mkdir -p /etc/wazuh-indexer/certs
+cd /etc/wazuh-indexer/certs
+root@siemserver:/etc/wazuh-indexer/certs# sudo openssl genrsa -out root-ca.key 2048
+root@siemserver:/etc/wazuh-indexer/certs# sudo openssl req -x509 -new -nodes -key root-ca.key -sha256 -days 3650 -out root-ca.pem -subj "/CN=RootCA"
+root@siemserver:/etc/wazuh-indexer/certs# sudo openssl genrsa -out indexer-key.pem 2048
+root@siemserver:/etc/wazuh-indexer/certs# sudo openssl req -new -key indexer-key.pem -out indexer.csr -subj "/CN=$(hostname)"
+root@siemserver:/etc/wazuh-indexer/certs# sudo openssl x509 -req -in indexer.csr -CA root-ca.pem -CAkey root-ca.key -CAcreateserial -out indexer.pem -days 365 -sha256
+Certificate request self-signature ok
+subject=CN = siemserver
+root@siemserver:/etc/wazuh-indexer/certs# sudo chown wazuh-indexer:wazuh-indexer /etc/wazuh-indexer/certs/*
+root@siemserver:/etc/wazuh-indexer/certs# sudo chmod 600 /etc/wazuh-indexer/certs/*
+root@siemserver:/etc/wazuh-indexer/certs# sudo nano /etc/wazuh-indexer/opensearch.yml
+root@siemserver:/etc/wazuh-indexer/certs# root@siemserver:/etc/wazuh-indexer/certs#
+root@siemserver:/etc/wazuh-indexer/certs#
+root@siemserver:/etc/wazuh-indexer/certs#
+root@siemserver:/etc/wazuh-indexer/certs# sudo nano /etc/wazuh-indexer/opensearch.yml
+root@siemserver:/etc/wazuh-indexer/certs# root@siemserver:/etc/wazuh-indexer/certs#
+root@siemserver:/etc/wazuh-indexer/certs# cd ..
+root@siemserver:/etc/wazuh-indexer# ls -la
+total 72
+drwxr-x---  10 wazuh-indexer wazuh-indexer  4096 Sep  1 06:28 .
+drwxr-xr-x 118 root          root           4096 Aug 30 09:51 ..
+drwxr-xr-x   2 root          root           4096 Sep  1 06:25 certs
+-rw-rw----   1 wazuh-indexer wazuh-indexer  3062 Apr 30 10:59 jvm.options
+drwxr-x---   2 wazuh-indexer wazuh-indexer  4096 Apr 30 10:58 jvm.options.d
+-rw-rw----   1 wazuh-indexer wazuh-indexer 17919 Apr 30 10:57 log4j2.properties
+-rw-rw----   1 wazuh-indexer wazuh-indexer   196 Aug 30 10:01 opensearch.keystore
+drwxr-x---   2 wazuh-indexer wazuh-indexer  4096 Aug 30 09:52 opensearch-notifications
+drwxr-x---   2 wazuh-indexer wazuh-indexer  4096 Aug 30 09:52 opensearch-notifications-core
+drwxr-x---   2 wazuh-indexer wazuh-indexer  4096 Aug 30 09:52 opensearch-observability
+drwxr-x---   2 wazuh-indexer wazuh-indexer  4096 Aug 30 09:52 opensearch-performance-analyzer
+drwxr-x---   2 wazuh-indexer wazuh-indexer  4096 Aug 30 09:52 opensearch-reports-scheduler
+drwxr-x---   2 wazuh-indexer wazuh-indexer  4096 Aug 30 09:52 opensearch-security
+-rw-rw----   1 wazuh-indexer wazuh-indexer  1811 Sep  1 05:26 opensearch.yml
+root@siemserver:/etc/wazuh-indexer# cd certs/
+root@siemserver:/etc/wazuh-indexer/certs# ls
+indexer.csr  indexer-key.pem  indexer.pem  root-ca.key  root-ca.pem  root-ca.srl
+root@siemserver:/etc/wazuh-indexer/certs# ls -la
+total 32
+drwxr-xr-x  2 root          root          4096 Sep  1 06:25 .
+drwxr-x--- 10 wazuh-indexer wazuh-indexer 4096 Sep  1 06:28 ..
+-rw-------  1 wazuh-indexer wazuh-indexer  891 Sep  1 06:25 indexer.csr
+-rw-------  1 wazuh-indexer wazuh-indexer 1704 Sep  1 06:25 indexer-key.pem
+-rw-------  1 wazuh-indexer wazuh-indexer  989 Sep  1 06:25 indexer.pem
+-rw-------  1 wazuh-indexer wazuh-indexer 1704 Sep  1 06:25 root-ca.key
+-rw-------  1 wazuh-indexer wazuh-indexer 1107 Sep  1 06:25 root-ca.pem
+-rw-------  1 wazuh-indexer wazuh-indexer   41 Sep  1 06:25 root-ca.srl
+root@siemserver:/etc/wazuh-indexer/certs# sudo nano /etc/wazuh-indexer/opensearch.yml
+root@siemserver:/etc/wazuh-indexer/certs# root@siemserver:/etc/wazuh-indexer/certs#
+root@siemserver:/etc/wazuh-indexer/certs# sudo systemctl restart wazuh-indexer
+root@siemserver:/etc/wazuh-indexer/certs# sudo systemctl status wazuh-indexer -l
+● wazuh-indexer.service - wazuh-indexer
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-indexer.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 06:31:34 UTC; 2s ago
+       Docs: https://documentation.wazuh.com
+   Main PID: 5360 (java)
+      Tasks: 97 (limit: 4888)
+     Memory: 1.3G (peak: 1.3G swap: 67.1M swap peak: 79.4M)
+        CPU: 32.526s
+     CGroup: /system.slice/wazuh-indexer.service
+             └─5360 /usr/share/wazuh-indexer/jdk/bin/java -Xshare:auto -Dopensearch.networkaddress.cache.ttl=60 -Dopensearch.networkaddress.cache.negative.ttl=10 -XX:+AlwaysPreTouch -Xss1m -Djava.awt.headless=t>
+
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager has been called by org.opensearch.bootstrap.OpenSearch (file:/usr/share/wazuh-indexer/lib/opensearch-2.19.1.jar)
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: Please consider reporting this to the maintainers of org.opensearch.bootstrap.OpenSearch
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager will be removed in a future release
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: Sep 01, 2025 6:31:21 AM sun.util.locale.provider.LocaleProviderAdapter <clinit>
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: COMPAT locale provider will be removed in a future release
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: A terminally deprecated method in java.lang.System has been called
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager has been called by org.opensearch.bootstrap.Security (file:/usr/share/wazuh-indexer/lib/opensearch-2.19.1.jar)
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: Please consider reporting this to the maintainers of org.opensearch.bootstrap.Security
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager will be removed in a future release
+Sep 01 06:31:34 siemserver systemd[1]: Started wazuh-indexer.service - wazuh-indexer.
+lines 1-21/21 (END)
+root@siemserver:/etc/wazuh-indexer/certs#
+root@siemserver:/etc/wazuh-indexer/certs#
+root@siemserver:/etc/wazuh-indexer/certs#
+root@siemserver:/etc/wazuh-indexer/certs# cd ~
+root@siemserver:~# exit
+logout
+specxy@siemserver:/tmp$ cd ~
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$ sudo systemctl status wazuh-indexer
+[sudo] password for specxy:
+● wazuh-indexer.service - wazuh-indexer
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-indexer.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 06:31:34 UTC; 1min 40s ago
+       Docs: https://documentation.wazuh.com
+   Main PID: 5360 (java)
+      Tasks: 105 (limit: 4888)
+     Memory: 1.3G (peak: 1.3G swap: 66.5M swap peak: 79.4M)
+        CPU: 35.684s
+     CGroup: /system.slice/wazuh-indexer.service
+             └─5360 /usr/share/wazuh-indexer/jdk/bin/java -Xshare:auto -Dopensearch.networkaddress.cache.ttl=60 -Dopensearch.networkaddress.cache.negative.ttl=10 -XX:+AlwaysPreTouch -Xss1m -Djava.awt.headless=t>
+
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager has been called by org.opensearch.bootstrap.OpenSearch (file:/usr/share/wazuh-indexer/lib/opensearch-2.19.1.jar)
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: Please consider reporting this to the maintainers of org.opensearch.bootstrap.OpenSearch
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager will be removed in a future release
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: Sep 01, 2025 6:31:21 AM sun.util.locale.provider.LocaleProviderAdapter <clinit>
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: COMPAT locale provider will be removed in a future release
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: A terminally deprecated method in java.lang.System has been called
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager has been called by org.opensearch.bootstrap.Security (file:/usr/share/wazuh-indexer/lib/opensearch-2.19.1.jar)
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: Please consider reporting this to the maintainers of org.opensearch.bootstrap.Security
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager will be removed in a future release
+Sep 01 06:31:34 siemserver systemd[1]: Started wazuh-indexer.service - wazuh-indexer.
+
+specxy@siemserver:~$ sudo apt install wazuh-dashboard -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  wazuh-dashboard
+0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
+Need to get 181 MB of archives.
+After this operation, 965 MB of additional disk space will be used.
+Get:1 https://packages.wazuh.com/4.x/apt stable/main amd64 wazuh-dashboard amd64 4.12.0-1 [181 MB]
+Fetched 181 MB in 36s (4,973 kB/s)
+Selecting previously unselected package wazuh-dashboard.
+(Reading database ... 279529 files and directories currently installed.)
+Preparing to unpack .../wazuh-dashboard_4.12.0-1_amd64.deb ...
+Creating wazuh-dashboard group... OK
+Creating wazuh-dashboard user... OK
+Unpacking wazuh-dashboard (4.12.0-1) ...
+Setting up wazuh-dashboard (4.12.0-1) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+specxy@siemserver:~$ sudo nano /etc/wazuh-dashboard/opensearch_dashboards.yml
+specxy@siemserver:~$ sudo systemctl enable wazuh-dashboard && sudo systemctl start wazuh-dashboard
+Created symlink /etc/systemd/system/multi-user.target.wants/wazuh-dashboard.service → /etc/systemd/system/wazuh-dashboard.service.
+specxy@siemserver:~$ sudo systemctl status wazuh-dashboard.service
+× wazuh-dashboard.service - wazuh-dashboard
+     Loaded: loaded (/etc/systemd/system/wazuh-dashboard.service; enabled; preset: enabled)
+     Active: failed (Result: exit-code) since Mon 2025-09-01 06:36:08 UTC; 2min 3s ago
+   Duration: 3.222s
+    Process: 5958 ExecStart=/usr/share/wazuh-dashboard/bin/opensearch-dashboards (code=exited, status=1/FAILURE)
+   Main PID: 5958 (code=exited, status=1/FAILURE)
+        CPU: 3.721s
+
+Sep 01 06:36:08 siemserver opensearch-dashboards[5958]:     at MapSubscriber._next (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/operators/map.js:55:26)
+Sep 01 06:36:08 siemserver opensearch-dashboards[5958]:     at MapSubscriber.Subscriber.next (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/Subscriber.js:66:18)
+Sep 01 06:36:08 siemserver opensearch-dashboards[5958]:     at ReplaySubject._subscribe (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/ReplaySubject.js:80:28)
+Sep 01 06:36:08 siemserver opensearch-dashboards[5958]:     at ReplaySubject.Observable._trySubscribe (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/Observable.js:44:25)
+Sep 01 06:36:08 siemserver opensearch-dashboards[5958]:     at ReplaySubject.Subject._trySubscribe (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/Subject.js:102:51)
+Sep 01 06:36:08 siemserver opensearch-dashboards[5958]:     at ReplaySubject.Observable.subscribe (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/Observable.js:30:22)
+Sep 01 06:36:08 siemserver opensearch-dashboards[5958]:     at MapSubscriber.shareReplayOperation (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/operators/shareReplay.js:53:32)
+Sep 01 06:36:08 siemserver systemd[1]: wazuh-dashboard.service: Main process exited, code=exited, status=1/FAILURE
+Sep 01 06:36:08 siemserver systemd[1]: wazuh-dashboard.service: Failed with result 'exit-code'.
+Sep 01 06:36:08 siemserver systemd[1]: wazuh-dashboard.service: Consumed 3.721s CPU time.
+
+
+specxy@siemserver:~$ sudo systemctl status wazuh-dashboard.service
+× wazuh-dashboard.service - wazuh-dashboard
+     Loaded: loaded (/etc/systemd/system/wazuh-dashboard.service; enabled; preset: enabled)
+     Active: failed (Result: exit-code) since Mon 2025-09-01 06:36:08 UTC; 3min 40s ago
+   Duration: 3.222s
+    Process: 5958 ExecStart=/usr/share/wazuh-dashboard/bin/opensearch-dashboards (code=exited, status=1/FAILURE)
+   Main PID: 5958 (code=exited, status=1/FAILURE)
+        CPU: 3.721s
+
+Sep 01 06:36:08 siemserver opensearch-dashboards[5958]:     at MapSubscriber._next (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/operators/map.js:55:26)
+Sep 01 06:36:08 siemserver opensearch-dashboards[5958]:     at MapSubscriber.Subscriber.next (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/Subscriber.js:66:18)
+Sep 01 06:36:08 siemserver opensearch-dashboards[5958]:     at ReplaySubject._subscribe (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/ReplaySubject.js:80:28)
+Sep 01 06:36:08 siemserver opensearch-dashboards[5958]:     at ReplaySubject.Observable._trySubscribe (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/Observable.js:44:25)
+Sep 01 06:36:08 siemserver opensearch-dashboards[5958]:     at ReplaySubject.Subject._trySubscribe (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/Subject.js:102:51)
+Sep 01 06:36:08 siemserver opensearch-dashboards[5958]:     at ReplaySubject.Observable.subscribe (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/Observable.js:30:22)
+Sep 01 06:36:08 siemserver opensearch-dashboards[5958]:     at MapSubscriber.shareReplayOperation (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/operators/shareReplay.js:53:32)
+Sep 01 06:36:08 siemserver systemd[1]: wazuh-dashboard.service: Main process exited, code=exited, status=1/FAILURE
+Sep 01 06:36:08 siemserver systemd[1]: wazuh-dashboard.service: Failed with result 'exit-code'.
+Sep 01 06:36:08 siemserver systemd[1]: wazuh-dashboard.service: Consumed 3.721s CPU time.
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$ sudo nano /etc/wazuh-dashboard/opensearch_dashboards.yml
+specxy@siemserver:~$ sudo nano /etc/wazuh-dashboard/opensearch_dashboards.yml
+specxy@siemserver:~$ sudo systemctl status wazuh-indexer
+● wazuh-indexer.service - wazuh-indexer
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-indexer.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 06:31:34 UTC; 30min ago
+       Docs: https://documentation.wazuh.com
+   Main PID: 5360 (java)
+      Tasks: 111 (limit: 4888)
+     Memory: 975.4M (peak: 1.3G swap: 494.0M swap peak: 496.1M)
+        CPU: 1min 13.873s
+     CGroup: /system.slice/wazuh-indexer.service
+             └─5360 /usr/share/wazuh-indexer/jdk/bin/java -Xshare:auto -Dopensearch.networkaddress.cache.ttl=60 -Dopensearch.networkaddress.cache.negative.ttl=10 -XX:+AlwaysPreTouch -Xss1m -Djava.awt.headless=t>
+
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager has been called by org.opensearch.bootstrap.OpenSearch (file:/usr/share/wazuh-indexer/lib/opensearch-2.19.1.jar)
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: Please consider reporting this to the maintainers of org.opensearch.bootstrap.OpenSearch
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager will be removed in a future release
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: Sep 01, 2025 6:31:21 AM sun.util.locale.provider.LocaleProviderAdapter <clinit>
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: COMPAT locale provider will be removed in a future release
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: A terminally deprecated method in java.lang.System has been called
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager has been called by org.opensearch.bootstrap.Security (file:/usr/share/wazuh-indexer/lib/opensearch-2.19.1.jar)
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: Please consider reporting this to the maintainers of org.opensearch.bootstrap.Security
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager will be removed in a future release
+Sep 01 06:31:34 siemserver systemd[1]: Started wazuh-indexer.service - wazuh-indexer.
+
+specxy@siemserver:~$ sudo nano /etc/wazuh-dashboard/opensearch_dashboards.yml
+specxy@siemserver:~$ sudo nano /etc/wazuh-dashboard/opensearch_dashboards.yml
+specxy@siemserver:~$ sudo rm -rf /usr/share/wazuh-dashboard/data/
+specxy@siemserver:~$ sudo systemctl daemon-reload
+sudo systemctl start wazuh-dashboard
+specxy@siemserver:~$ sudo systemctl status wazuh-dashboard
+× wazuh-dashboard.service - wazuh-dashboard
+     Loaded: loaded (/etc/systemd/system/wazuh-dashboard.service; enabled; preset: enabled)
+     Active: failed (Result: exit-code) since Mon 2025-09-01 07:09:33 UTC; 1s ago
+   Duration: 5.973s
+    Process: 6158 ExecStart=/usr/share/wazuh-dashboard/bin/opensearch-dashboards (code=exited, status=1/FAILURE)
+   Main PID: 6158 (code=exited, status=1/FAILURE)
+        CPU: 5.147s
+
+Sep 01 07:09:33 siemserver opensearch-dashboards[6158]:     at MapSubscriber._next (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/operators/map.js:55:26)
+Sep 01 07:09:33 siemserver opensearch-dashboards[6158]:     at MapSubscriber.Subscriber.next (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/Subscriber.js:66:18)
+Sep 01 07:09:33 siemserver opensearch-dashboards[6158]:     at ReplaySubject._subscribe (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/ReplaySubject.js:80:28)
+Sep 01 07:09:33 siemserver opensearch-dashboards[6158]:     at ReplaySubject.Observable._trySubscribe (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/Observable.js:44:25)
+Sep 01 07:09:33 siemserver opensearch-dashboards[6158]:     at ReplaySubject.Subject._trySubscribe (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/Subject.js:102:51)
+Sep 01 07:09:33 siemserver opensearch-dashboards[6158]:     at ReplaySubject.Observable.subscribe (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/Observable.js:30:22)
+Sep 01 07:09:33 siemserver opensearch-dashboards[6158]:     at MapSubscriber.shareReplayOperation (/usr/share/wazuh-dashboard/node_modules/rxjs/internal/operators/shareReplay.js:53:32)
+Sep 01 07:09:33 siemserver systemd[1]: wazuh-dashboard.service: Main process exited, code=exited, status=1/FAILURE
+Sep 01 07:09:33 siemserver systemd[1]: wazuh-dashboard.service: Failed with result 'exit-code'.
+Sep 01 07:09:33 siemserver systemd[1]: wazuh-dashboard.service: Consumed 5.147s CPU time.
+specxy@siemserver:~$ sudo nano /etc/wazuh-dashboard/opensearch_dashboards.yml
+specxy@siemserver:~$ specxy@siemserver:~$ sudo nano /etc/wazuh-dashboard/opensearch_dashboards.yml
+specxy@siemserver:~$ sudo nano /etc/wazuh-dashboard/opensearch_dashboards.yml
+specxy@siemserver:~$ ls -la /etc/wazuh-dashboard/certs/
+ls: cannot access '/etc/wazuh-dashboard/certs/': Permission denied
+specxy@siemserver:~$ sudo ls -la /etc/wazuh-dashboard/certs/
+ls: cannot access '/etc/wazuh-dashboard/certs/': No such file or directory
+specxy@siemserver:~$ sudo -i
+root@siemserver:~# cd /etc/wazuh-dashboard/certs/
+-bash: cd: /etc/wazuh-dashboard/certs/: No such file or directory
+root@siemserver:~# cd /etc/wazuh-dashboard/
+root@siemserver:/etc/wazuh-dashboard# ls -la
+total 20
+drwxr-x---   2 wazuh-dashboard wazuh-dashboard 4096 Sep  1 07:11 .
+drwxr-xr-x 119 root            root            4096 Sep  1 06:34 ..
+-rw-r-----   1 wazuh-dashboard wazuh-dashboard  312 May  5  2023 node.options
+-rw-r--r--   1 wazuh-dashboard wazuh-dashboard  226 Sep  1 06:34 opensearch_dashboards.keystore
+-rw-r-----   1 wazuh-dashboard wazuh-dashboard  656 Sep  1 07:11 opensearch_dashboards.yml
+root@siemserver:/etc/wazuh-dashboard# sudo mkdir -p /etc/wazuh-dashboard/certs
+cd /etc/wazuh-dashboard/certs
+root@siemserver:/etc/wazuh-dashboard/certs# sudo openssl genrsa -out dashboard-key.pem 2048
+sudo openssl req -new -x509 -key dashboard-key.pem -out dashboard.pem -days 365 -subj "/CN=$(hostname)"
+sudo cp dashboard.pem root-ca.pem
+root@siemserver:/etc/wazuh-dashboard/certs# sudo chown wazuh-dashboard:wazuh-dashboard /etc/wazuh-dashboard/certs/*
+sudo chmod 600 /etc/wazuh-dashboard/certs/*
+root@siemserver:/etc/wazuh-dashboard/certs# sudo systemctl restart wazuh-dashboard
+root@siemserver:/etc/wazuh-dashboard/certs# sudo systemctl status wazuh-dashboard
+● wazuh-dashboard.service - wazuh-dashboard
+     Loaded: loaded (/etc/systemd/system/wazuh-dashboard.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 07:30:02 UTC; 13s ago
+   Main PID: 6381 (node)
+      Tasks: 11 (limit: 4888)
+     Memory: 297.7M (peak: 298.3M)
+        CPU: 5.444s
+     CGroup: /system.slice/wazuh-dashboard.service
+             └─6381 /usr/share/wazuh-dashboard/node/bin/node --no-warnings --max-http-header-size=65536 --unhandled-rejections=warn /usr/share/wazuh-dashboard/src/cli/dist
+
+Sep 01 07:30:08 siemserver opensearch-dashboards[6381]: [agentkeepalive:deprecated] options.freeSocketKeepAliveTimeout is deprecated, please use options.freeSocketTimeout instead
+Sep 01 07:30:08 siemserver opensearch-dashboards[6381]: [agentkeepalive:deprecated] options.freeSocketKeepAliveTimeout is deprecated, please use options.freeSocketTimeout instead
+Sep 01 07:30:08 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T07:30:08Z","tags":["info","dynamic-config-service"],"pid":6381,"message":"initiating start()"}
+Sep 01 07:30:08 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T07:30:08Z","tags":["info","dynamic-config-service"],"pid":6381,"message":"finished start()"}
+Sep 01 07:30:08 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T07:30:08Z","tags":["info","savedobjects-service"],"pid":6381,"message":"Waiting until all OpenSearch nodes are comp>
+Sep 01 07:30:08 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T07:30:08Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 07:30:08 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T07:30:08Z","tags":["error","savedobjects-service"],"pid":6381,"message":"Unable to retrieve version information fro>
+Sep 01 07:30:10 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T07:30:10Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 07:30:13 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T07:30:13Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 07:30:15 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T07:30:15Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+lines 1-20/20 (END)
+root@siemserver:/etc/wazuh-dashboard/certs# cd ~
+root@siemserver:~# sudo nano /etc/filebeat/filebeat.yml
+root@siemserver:~# sudo systemctl restart filebeat
+root@siemserver:~# sudo systemctl status filebeat.service
+× filebeat.service - Filebeat sends log files to Logstash or directly to Elasticsearch.
+     Loaded: loaded (/usr/lib/systemd/system/filebeat.service; enabled; preset: enabled)
+     Active: failed (Result: exit-code) since Mon 2025-09-01 08:26:40 UTC; 8s ago
+   Duration: 86ms
+       Docs: https://www.elastic.co/beats/filebeat
+    Process: 6568 ExecStart=/usr/share/filebeat/bin/filebeat --environment systemd $BEAT_LOG_OPTS $BEAT_CONFIG_OPTS $BEAT_PATH_OPTS (code=exited, status=1/FAILURE)
+   Main PID: 6568 (code=exited, status=1/FAILURE)
+        CPU: 113ms
+
+Sep 01 08:26:40 siemserver systemd[1]: filebeat.service: Scheduled restart job, restart counter is at 5.
+Sep 01 08:26:40 siemserver systemd[1]: filebeat.service: Start request repeated too quickly.
+Sep 01 08:26:40 siemserver systemd[1]: filebeat.service: Failed with result 'exit-code'.
+Sep 01 08:26:40 siemserver systemd[1]: Failed to start filebeat.service - Filebeat sends log files to Logstash or directly to Elasticsearch..
+root@siemserver:~# sudo nano /etc/filebeat/filebeat.yml
+root@siemserver:~# sudo systemctl restart filebeat
+root@siemserver:~# sudo systemctl status filebeat.service
+× filebeat.service - Filebeat sends log files to Logstash or directly to Elasticsearch.
+     Loaded: loaded (/usr/lib/systemd/system/filebeat.service; enabled; preset: enabled)
+     Active: failed (Result: exit-code) since Mon 2025-09-01 08:28:57 UTC; 3s ago
+   Duration: 79ms
+       Docs: https://www.elastic.co/beats/filebeat
+    Process: 6649 ExecStart=/usr/share/filebeat/bin/filebeat --environment systemd $BEAT_LOG_OPTS $BEAT_CONFIG_OPTS $BEAT_PATH_OPTS (code=exited, status=1/FAILURE)
+   Main PID: 6649 (code=exited, status=1/FAILURE)
+        CPU: 106ms
+
+Sep 01 08:28:57 siemserver systemd[1]: filebeat.service: Scheduled restart job, restart counter is at 5.
+Sep 01 08:28:57 siemserver systemd[1]: filebeat.service: Start request repeated too quickly.
+Sep 01 08:28:57 siemserver systemd[1]: filebeat.service: Failed with result 'exit-code'.
+Sep 01 08:28:57 siemserver systemd[1]: Failed to start filebeat.service - Filebeat sends log files to Logstash or directly to Elasticsearch..
+root@siemserver:~# sudo systemctl restart filebeat
+root@siemserver:~# sudo nano /etc/filebeat/filebeat.yml
+root@siemserver:~# sudo systemctl restart filebeat
+root@siemserver:~# sudo systemctl status filebeat.service
+× filebeat.service - Filebeat sends log files to Logstash or directly to Elasticsearch.
+     Loaded: loaded (/usr/lib/systemd/system/filebeat.service; enabled; preset: enabled)
+     Active: failed (Result: exit-code) since Mon 2025-09-01 08:31:41 UTC; 2s ago
+   Duration: 79ms
+       Docs: https://www.elastic.co/beats/filebeat
+    Process: 6786 ExecStart=/usr/share/filebeat/bin/filebeat --environment systemd $BEAT_LOG_OPTS $BEAT_CONFIG_OPTS $BEAT_PATH_OPTS (code=exited, status=1/FAILURE)
+   Main PID: 6786 (code=exited, status=1/FAILURE)
+        CPU: 103ms
+
+Sep 01 08:31:41 siemserver systemd[1]: filebeat.service: Scheduled restart job, restart counter is at 5.
+Sep 01 08:31:41 siemserver systemd[1]: filebeat.service: Start request repeated too quickly.
+Sep 01 08:31:41 siemserver systemd[1]: filebeat.service: Failed with result 'exit-code'.
+Sep 01 08:31:41 siemserver systemd[1]: Failed to start filebeat.service - Filebeat sends log files to Logstash or directly to Elasticsearch..
+root@siemserver:~# sudo nano /etc/filebeat/filebeat.yml
+root@siemserver:~# sudo systemctl restart filebeat
+root@siemserver:~# sudo systemctl status filebeat.service
+× filebeat.service - Filebeat sends log files to Logstash or directly to Elasticsearch.
+     Loaded: loaded (/usr/lib/systemd/system/filebeat.service; enabled; preset: enabled)
+     Active: failed (Result: exit-code) since Mon 2025-09-01 08:32:37 UTC; 1s ago
+   Duration: 72ms
+       Docs: https://www.elastic.co/beats/filebeat
+    Process: 6850 ExecStart=/usr/share/filebeat/bin/filebeat --environment systemd $BEAT_LOG_OPTS $BEAT_CONFIG_OPTS $BEAT_PATH_OPTS (code=exited, status=1/FAILURE)
+   Main PID: 6850 (code=exited, status=1/FAILURE)
+        CPU: 96ms
+
+Sep 01 08:32:37 siemserver systemd[1]: filebeat.service: Scheduled restart job, restart counter is at 5.
+Sep 01 08:32:37 siemserver systemd[1]: filebeat.service: Start request repeated too quickly.
+Sep 01 08:32:37 siemserver systemd[1]: filebeat.service: Failed with result 'exit-code'.
+Sep 01 08:32:37 siemserver systemd[1]: Failed to start filebeat.service - Filebeat sends log files to Logstash or directly to Elasticsearch..
+root@siemserver:~# sudo nano /etc/filebeat/filebeat.yml
+root@siemserver:~# sudo systemctl restart filebeat
+root@siemserver:~# sudo systemctl status filebeat.service
+● filebeat.service - Filebeat sends log files to Logstash or directly to Elasticsearch.
+     Loaded: loaded (/usr/lib/systemd/system/filebeat.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 08:35:55 UTC; 2s ago
+       Docs: https://www.elastic.co/beats/filebeat
+   Main PID: 6883 (filebeat)
+      Tasks: 14 (limit: 4888)
+     Memory: 57.5M (peak: 59.1M)
+        CPU: 148ms
+     CGroup: /system.slice/filebeat.service
+             └─6883 /usr/share/filebeat/bin/filebeat --environment systemd -c /etc/filebeat/filebeat.yml --path.home /usr/share/filebeat --path.config /etc/filebeat --path.data /var/lib/filebeat --path.logs /va>
+
+Sep 01 08:35:55 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-01T08:35:55.399Z","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/cmd/instance.(*Beat).launch","file.name":"ins>
+Sep 01 08:35:55 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-01T08:35:55.406Z","log.logger":"filebeat","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/statestore/backend/me>
+Sep 01 08:35:55 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-01T08:35:55.413Z","log.logger":"registrar","log.origin":{"function":"github.com/elastic/beats/v7/filebeat/registrar.(*Registr>
+Sep 01 08:35:55 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-01T08:35:55.413Z","log.logger":"crawler","log.origin":{"function":"github.com/elastic/beats/v7/filebeat/beater.(*crawler).Sta>
+Sep 01 08:35:55 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-01T08:35:55.414Z","log.logger":"crawler","log.origin":{"function":"github.com/elastic/beats/v7/filebeat/beater.(*crawler).sta>
+Sep 01 08:35:55 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-01T08:35:55.414Z","log.logger":"input.filestream","log.origin":{"function":"github.com/elastic/beats/v7/filebeat/input/v2/com>
+Sep 01 08:35:55 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-01T08:35:55.415Z","log.logger":"input.filestream.metric_registry","log.origin":{"function":"github.com/elastic/beats/v7/libbe>
+Sep 01 08:35:55 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-01T08:35:55.417Z","log.logger":"crawler","log.origin":{"function":"github.com/elastic/beats/v7/filebeat/beater.(*crawler).Sta>
+Sep 01 08:35:55 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-01T08:35:55.417Z","log.logger":"crawler","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/cfgfile.(*Reloader).Ru>
+Sep 01 08:35:55 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-01T08:35:55.417Z","log.logger":"crawler","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/cfgfile.(*Reloader).Ru>
+
+root@siemserver:~# sudo systemctl status wazuh-dashboard.service
+● wazuh-dashboard.service - wazuh-dashboard
+     Loaded: loaded (/etc/systemd/system/wazuh-dashboard.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 07:30:02 UTC; 1h 34min ago
+   Main PID: 6381 (node)
+      Tasks: 11 (limit: 4888)
+     Memory: 184.1M (peak: 298.3M swap: 6.0M swap peak: 6.0M)
+        CPU: 42.730s
+     CGroup: /system.slice/wazuh-dashboard.service
+             └─6381 /usr/share/wazuh-dashboard/node/bin/node --no-warnings --max-http-header-size=65536 --unhandled-rejections=warn /usr/share/wazuh-dashboard/src/cli/dist
+
+Sep 01 09:04:06 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:04:06Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:04:08 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:04:08Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:04:11 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:04:11Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:04:13 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:04:13Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:04:16 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:04:16Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:04:18 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:04:18Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:04:21 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:04:21Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:04:23 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:04:23Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:04:26 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:04:26Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:04:28 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:04:28Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+
+root@siemserver:~# sudo systemctl status wazuh
+Unit wazuh.service could not be found.
+root@siemserver:~# sudo systemctl status wazuh-indexer.service
+● wazuh-indexer.service - wazuh-indexer
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-indexer.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 06:31:34 UTC; 2h 33min ago
+       Docs: https://documentation.wazuh.com
+   Main PID: 5360 (java)
+      Tasks: 114 (limit: 4888)
+     Memory: 792.8M (peak: 1.3G swap: 751.6M swap peak: 751.7M)
+        CPU: 3min 27.162s
+     CGroup: /system.slice/wazuh-indexer.service
+             └─5360 /usr/share/wazuh-indexer/jdk/bin/java -Xshare:auto -Dopensearch.networkaddress.cache.ttl=60 -Dopensearch.networkaddress.cache.negative.ttl=10 -XX:+AlwaysPreTouch -Xss1m -Djava.awt.headless=t>
+
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager has been called by org.opensearch.bootstrap.OpenSearch (file:/usr/share/wazuh-indexer/lib/opensearch-2.19.1.jar)
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: Please consider reporting this to the maintainers of org.opensearch.bootstrap.OpenSearch
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager will be removed in a future release
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: Sep 01, 2025 6:31:21 AM sun.util.locale.provider.LocaleProviderAdapter <clinit>
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: COMPAT locale provider will be removed in a future release
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: A terminally deprecated method in java.lang.System has been called
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager has been called by org.opensearch.bootstrap.Security (file:/usr/share/wazuh-indexer/lib/opensearch-2.19.1.jar)
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: Please consider reporting this to the maintainers of org.opensearch.bootstrap.Security
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager will be removed in a future release
+Sep 01 06:31:34 siemserver systemd[1]: Started wazuh-indexer.service - wazuh-indexer.
+
+root@siemserver:~# sudo systemctl status wazuh-manager.service
+× wazuh-manager.service - Wazuh manager
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-manager.service; enabled; preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2025-08-30 09:32:30 UTC; 1 day 23h ago
+        CPU: 6.138s
+
+Notice: journal has been rotated since unit was started, output may be incomplete.
+root@siemserver:~# sudo systemctl restart wazuh-manager.service
+root@siemserver:~# sudo systemctl status wazuh-manager.service
+● wazuh-manager.service - Wazuh manager
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-manager.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 09:06:30 UTC; 2s ago
+    Process: 7142 ExecStart=/usr/bin/env /var/ossec/bin/wazuh-control start (code=exited, status=0/SUCCESS)
+      Tasks: 251 (limit: 4888)
+     Memory: 1.0G (peak: 1.0G)
+        CPU: 17.870s
+     CGroup: /system.slice/wazuh-manager.service
+             ├─7205 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─7206 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─7207 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─7210 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─7213 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─7255 /var/ossec/bin/wazuh-authd
+             ├─7270 /var/ossec/bin/wazuh-db
+             ├─7299 /var/ossec/bin/wazuh-execd
+             ├─7314 /var/ossec/bin/wazuh-analysisd
+             ├─7448 /var/ossec/bin/wazuh-syscheckd
+             ├─7463 /var/ossec/bin/wazuh-remoted
+             ├─7498 /var/ossec/bin/wazuh-logcollector
+             ├─7519 /var/ossec/bin/wazuh-monitord
+             ├─7550 /var/ossec/bin/wazuh-modulesd
+             ├─8128 /usr/bin/python3 /usr/sbin/ufw status
+             └─8236 /usr/sbin/iptables -L ufw-user-input -n
+
+Sep 01 09:06:23 siemserver env[7142]: Started wazuh-analysisd...
+Sep 01 09:06:24 siemserver env[7142]: Started wazuh-syscheckd...
+Sep 01 09:06:25 siemserver env[7142]: Started wazuh-remoted...
+Sep 01 09:06:26 siemserver env[7142]: Started wazuh-logcollector...
+Sep 01 09:06:27 siemserver env[7142]: Started wazuh-monitord...
+Sep 01 09:06:27 siemserver env[7547]: 2025/09/01 09:06:27 wazuh-modulesd:router: INFO: Loaded router module.
+Sep 01 09:06:27 siemserver env[7547]: 2025/09/01 09:06:27 wazuh-modulesd:content_manager: INFO: Loaded content_manager module.
+Sep 01 09:06:28 siemserver env[7142]: Started wazuh-modulesd...
+Sep 01 09:06:30 siemserver env[7142]: Completed.
+Sep 01 09:06:30 siemserver systemd[1]: Started wazuh-manager.service - Wazuh manager.
+root@siemserver:~# sudo systemctl status wazuh-indexer.service
+● wazuh-indexer.service - wazuh-indexer
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-indexer.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 06:31:34 UTC; 2h 38min ago
+       Docs: https://documentation.wazuh.com
+   Main PID: 5360 (java)
+      Tasks: 114 (limit: 4888)
+     Memory: 160.4M (peak: 1.3G swap: 1.2G swap peak: 1.2G)
+        CPU: 3min 33.725s
+     CGroup: /system.slice/wazuh-indexer.service
+             └─5360 /usr/share/wazuh-indexer/jdk/bin/java -Xshare:auto -Dopensearch.networkaddress.cache.ttl=60 -Dopensearch.networkaddress.cache.negative.ttl=10 -XX:+AlwaysPreTouch -Xss1m -Djava.awt.headless=t>
+
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager has been called by org.opensearch.bootstrap.OpenSearch (file:/usr/share/wazuh-indexer/lib/opensearch-2.19.1.jar)
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: Please consider reporting this to the maintainers of org.opensearch.bootstrap.OpenSearch
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager will be removed in a future release
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: Sep 01, 2025 6:31:21 AM sun.util.locale.provider.LocaleProviderAdapter <clinit>
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: COMPAT locale provider will be removed in a future release
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: A terminally deprecated method in java.lang.System has been called
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager has been called by org.opensearch.bootstrap.Security (file:/usr/share/wazuh-indexer/lib/opensearch-2.19.1.jar)
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: Please consider reporting this to the maintainers of org.opensearch.bootstrap.Security
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager will be removed in a future release
+Sep 01 06:31:34 siemserver systemd[1]: Started wazuh-indexer.service - wazuh-indexer.
+...skipping...
+● wazuh-indexer.service - wazuh-indexer
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-indexer.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 06:31:34 UTC; 2h 38min ago
+       Docs: https://documentation.wazuh.com
+   Main PID: 5360 (java)
+      Tasks: 114 (limit: 4888)
+     Memory: 160.4M (peak: 1.3G swap: 1.2G swap peak: 1.2G)
+        CPU: 3min 33.725s
+     CGroup: /system.slice/wazuh-indexer.service
+             └─5360 /usr/share/wazuh-indexer/jdk/bin/java -Xshare:auto -Dopensearch.networkaddress.cache.ttl=60 -Dopensearch.networkaddress.cache.negative.ttl=10 -XX:+AlwaysPreTouch -Xss1m -Djava.awt.headless=t>
+
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager has been called by org.opensearch.bootstrap.OpenSearch (file:/usr/share/wazuh-indexer/lib/opensearch-2.19.1.jar)
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: Please consider reporting this to the maintainers of org.opensearch.bootstrap.OpenSearch
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager will be removed in a future release
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: Sep 01, 2025 6:31:21 AM sun.util.locale.provider.LocaleProviderAdapter <clinit>
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: COMPAT locale provider will be removed in a future release
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: A terminally deprecated method in java.lang.System has been called
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager has been called by org.opensearch.bootstrap.Security (file:/usr/share/wazuh-indexer/lib/opensearch-2.19.1.jar)
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: Please consider reporting this to the maintainers of org.opensearch.bootstrap.Security
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager will be removed in a future release
+Sep 01 06:31:34 siemserver systemd[1]: Started wazuh-indexer.service - wazuh-indexer.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-21/21 (END)
+root@siemserver:~# sudo systemctl status wazuh-dashboard.service
+● wazuh-dashboard.service - wazuh-dashboard
+     Loaded: loaded (/etc/systemd/system/wazuh-dashboard.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 07:30:02 UTC; 1h 40min ago
+   Main PID: 6381 (node)
+      Tasks: 11 (limit: 4888)
+     Memory: 106.6M (peak: 298.3M swap: 83.6M swap peak: 93.7M)
+        CPU: 46.007s
+     CGroup: /system.slice/wazuh-dashboard.service
+             └─6381 /usr/share/wazuh-dashboard/node/bin/node --no-warnings --max-http-header-size=65536 --unhandled-rejections=warn /usr/share/wazuh-dashboard/src/cli/dist
+
+Sep 01 09:10:02 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:10:02Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:10:03 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:10:03Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:10:07 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:10:07Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:10:08 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:10:08Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:10:13 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:10:13Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:10:13 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:10:13Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:10:22 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:10:22Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:10:23 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:10:23Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:10:30 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:10:30Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:10:31 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:10:31Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+
+root@siemserver:~# nano /etc/wazuh-dashboard/opensearch_dashboards.yml
+root@siemserver:~# sudo systemctl status wazuh-dashboard.service
+● wazuh-dashboard.service - wazuh-dashboard
+     Loaded: loaded (/etc/systemd/system/wazuh-dashboard.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 07:30:02 UTC; 1h 43min ago
+   Main PID: 6381 (node)
+      Tasks: 11 (limit: 4888)
+     Memory: 114.2M (peak: 298.3M swap: 78.0M swap peak: 93.7M)
+        CPU: 47.233s
+     CGroup: /system.slice/wazuh-dashboard.service
+             └─6381 /usr/share/wazuh-dashboard/node/bin/node --no-warnings --max-http-header-size=65536 --unhandled-rejections=warn /usr/share/wazuh-dashboard/src/cli/dist
+
+Sep 01 09:12:51 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:12:51Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:12:54 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:12:54Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:12:56 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:12:56Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:12:59 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:12:59Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:13:01 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:13:01Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:13:04 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:13:04Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:13:06 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:13:06Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:13:09 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:13:09Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:13:11 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:13:11Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+Sep 01 09:13:14 siemserver opensearch-dashboards[6381]: {"type":"log","@timestamp":"2025-09-01T09:13:14Z","tags":["error","opensearch","data"],"pid":6381,"message":"[ConnectionError]: self-signed certificate in>
+
+root@siemserver:~# sudo systemctl restart wazuh-dashboard
+root@siemserver:~# sudo systemctl status wazuh-dashboard
+× wazuh-dashboard.service - wazuh-dashboard
+     Loaded: loaded (/etc/systemd/system/wazuh-dashboard.service; enabled; preset: enabled)
+     Active: failed (Result: exit-code) since Mon 2025-09-01 09:13:52 UTC; 5s ago
+   Duration: 6.409s
+    Process: 10981 ExecStart=/usr/share/wazuh-dashboard/bin/opensearch-dashboards (code=exited, status=1/FAILURE)
+   Main PID: 10981 (code=exited, status=1/FAILURE)
+        CPU: 4.957s
+
+Sep 01 09:13:52 siemserver opensearch-dashboards[10981]: {"type":"log","@timestamp":"2025-09-01T09:13:52Z","tags":["info","plugins-service"],"pid":10981,"message":"Plugin \"applicationConfig\" is disabled."}
+Sep 01 09:13:52 siemserver opensearch-dashboards[10981]: {"type":"log","@timestamp":"2025-09-01T09:13:52Z","tags":["info","plugins-service"],"pid":10981,"message":"Plugin \"dataSource\" is disabled."}
+Sep 01 09:13:52 siemserver opensearch-dashboards[10981]: {"type":"log","@timestamp":"2025-09-01T09:13:52Z","tags":["info","plugins-service"],"pid":10981,"message":"Plugin \"cspHandler\" is disabled."}
+Sep 01 09:13:52 siemserver opensearch-dashboards[10981]: {"type":"log","@timestamp":"2025-09-01T09:13:52Z","tags":["info","plugins-service"],"pid":10981,"message":"Plugin \"visTypeXy\" is disabled."}
+Sep 01 09:13:52 siemserver opensearch-dashboards[10981]: {"type":"log","@timestamp":"2025-09-01T09:13:52Z","tags":["info","plugins-service"],"pid":10981,"message":"Plugin \"workspace\" is disabled."}
+Sep 01 09:13:52 siemserver opensearch-dashboards[10981]: {"type":"log","@timestamp":"2025-09-01T09:13:52Z","tags":["fatal","root"],"pid":10981,"message":"Error: Port 9200 is already in use. Another instance of >
+Sep 01 09:13:52 siemserver opensearch-dashboards[10981]:  FATAL  Error: Port 9200 is already in use. Another instance of OpenSearch Dashboards may be running!
+Sep 01 09:13:52 siemserver systemd[1]: wazuh-dashboard.service: Main process exited, code=exited, status=1/FAILURE
+Sep 01 09:13:52 siemserver systemd[1]: wazuh-dashboard.service: Failed with result 'exit-code'.
+Sep 01 09:13:52 siemserver systemd[1]: wazuh-dashboard.service: Consumed 4.957s CPU time.
+
+root@siemserver:~# nano /etc/wazuh-dashboard/opensearch_dashboards.yml
+root@siemserver:~# sudo systemctl restart wazuh-dashboard
+root@siemserver:~# sudo systemctl status wazuh-dashboard
+● wazuh-dashboard.service - wazuh-dashboard
+     Loaded: loaded (/etc/systemd/system/wazuh-dashboard.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 09:14:26 UTC; 2s ago
+   Main PID: 11017 (node)
+      Tasks: 7 (limit: 4888)
+     Memory: 109.3M (peak: 109.5M)
+        CPU: 2.238s
+     CGroup: /system.slice/wazuh-dashboard.service
+             └─11017 /usr/share/wazuh-dashboard/node/bin/node --no-warnings --max-http-header-size=65536 --unhandled-rejections=warn /usr/share/wazuh-dashboard/src/cli/dist
+
+Sep 01 09:14:26 siemserver systemd[1]: Started wazuh-dashboard.service - wazuh-dashboard.
+root@siemserver:~# ^C
+root@siemserver:~#
+root@siemserver:~#
+root@siemserver:~#
+root@siemserver:~# sudo systemctl status wazuh-dashboard.service
+● wazuh-dashboard.service - wazuh-dashboard
+     Loaded: loaded (/etc/systemd/system/wazuh-dashboard.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 09:14:26 UTC; 19min ago
+   Main PID: 11017 (node)
+      Tasks: 11 (limit: 4888)
+     Memory: 190.1M (peak: 286.0M)
+        CPU: 13.647s
+     CGroup: /system.slice/wazuh-dashboard.service
+             └─11017 /usr/share/wazuh-dashboard/node/bin/node --no-warnings --max-http-header-size=65536 --unhandled-rejections=warn /usr/share/wazuh-dashboard/src/cli/dist
+
+Sep 01 09:33:18 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-01T09:33:18Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 01 09:33:20 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-01T09:33:20Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 01 09:33:23 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-01T09:33:23Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 01 09:33:25 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-01T09:33:25Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 01 09:33:28 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-01T09:33:28Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 01 09:33:30 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-01T09:33:30Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 01 09:33:33 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-01T09:33:33Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 01 09:33:35 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-01T09:33:35Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 01 09:33:38 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-01T09:33:38Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 01 09:33:40 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-01T09:33:40Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+root@siemserver:~# ^C
+root@siemserver:~# sudo systemctl status wazuh-indexer
+● wazuh-indexer.service - wazuh-indexer
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-indexer.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 06:31:34 UTC; 3h 2min ago
+       Docs: https://documentation.wazuh.com
+   Main PID: 5360 (java)
+      Tasks: 114 (limit: 4888)
+     Memory: 346.2M (peak: 1.3G swap: 1.0G swap peak: 1.2G)
+        CPU: 3min 56.222s
+     CGroup: /system.slice/wazuh-indexer.service
+             └─5360 /usr/share/wazuh-indexer/jdk/bin/java -Xshare:auto -Dopensearch.networkaddress.cache.ttl=60 -Dopensearch.networkaddress.cache.negative.ttl=10 -XX:+AlwaysPreTouch -Xss1m -Djava.awt.headless=t>
+
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager has been called by org.opensearch.bootstrap.OpenSearch (file:/usr/share/wazuh-indexer/lib/opensearch-2.19.1.jar)
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: Please consider reporting this to the maintainers of org.opensearch.bootstrap.OpenSearch
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager will be removed in a future release
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: Sep 01, 2025 6:31:21 AM sun.util.locale.provider.LocaleProviderAdapter <clinit>
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: COMPAT locale provider will be removed in a future release
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: A terminally deprecated method in java.lang.System has been called
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager has been called by org.opensearch.bootstrap.Security (file:/usr/share/wazuh-indexer/lib/opensearch-2.19.1.jar)
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: Please consider reporting this to the maintainers of org.opensearch.bootstrap.Security
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager will be removed in a future release
+Sep 01 06:31:34 siemserver systemd[1]: Started wazuh-indexer.service - wazuh-indexer.
+
+root@siemserver:~# sudo systemctl status wazuh-manager.service
+● wazuh-manager.service - Wazuh manager
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-manager.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 09:06:30 UTC; 27min ago
+    Process: 7142 ExecStart=/usr/bin/env /var/ossec/bin/wazuh-control start (code=exited, status=0/SUCCESS)
+      Tasks: 254 (limit: 4888)
+     Memory: 381.9M (peak: 2.2G swap: 118.5M swap peak: 118.5M)
+        CPU: 3min 59.009s
+     CGroup: /system.slice/wazuh-manager.service
+             ├─7205 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─7206 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─7207 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─7210 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─7213 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─7255 /var/ossec/bin/wazuh-authd
+             ├─7270 /var/ossec/bin/wazuh-db
+             ├─7299 /var/ossec/bin/wazuh-execd
+             ├─7314 /var/ossec/bin/wazuh-analysisd
+             ├─7448 /var/ossec/bin/wazuh-syscheckd
+             ├─7463 /var/ossec/bin/wazuh-remoted
+             ├─7498 /var/ossec/bin/wazuh-logcollector
+             ├─7519 /var/ossec/bin/wazuh-monitord
+             └─7550 /var/ossec/bin/wazuh-modulesd
+
+Sep 01 09:06:23 siemserver env[7142]: Started wazuh-analysisd...
+Sep 01 09:06:24 siemserver env[7142]: Started wazuh-syscheckd...
+Sep 01 09:06:25 siemserver env[7142]: Started wazuh-remoted...
+Sep 01 09:06:26 siemserver env[7142]: Started wazuh-logcollector...
+Sep 01 09:06:27 siemserver env[7142]: Started wazuh-monitord...
+Sep 01 09:06:27 siemserver env[7547]: 2025/09/01 09:06:27 wazuh-modulesd:router: INFO: Loaded router module.
+Sep 01 09:06:27 siemserver env[7547]: 2025/09/01 09:06:27 wazuh-modulesd:content_manager: INFO: Loaded content_manager module.
+Sep 01 09:06:28 siemserver env[7142]: Started wazuh-modulesd...
+Sep 01 09:06:30 siemserver env[7142]: Completed.
+Sep 01 09:06:30 siemserver systemd[1]: Started wazuh-manager.service - Wazuh manager.
+root@siemserver:~# ^C
+root@siemserver:~# http://localhost:9200client_loop: send disconnect: Connection reset
+
+C:\Windows\System32>ssh specxy@192.168.1.101
+specxy@192.168.1.101's password:
+Welcome to Ubuntu 24.04.3 LTS (GNU/Linux 6.8.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue Sep  2 03:47:10 AM UTC 2025
+
+  System load:  0.1                Processes:              330
+  Usage of /:   60.9% of 37.23GB   Users logged in:        1
+  Memory usage: 89%                IPv4 address for ens33: 192.168.1.101
+  Swap usage:   65%
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+2 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Mon Sep  1 04:25:46 2025 from 192.168.1.3
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:00:ab:1f brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.1.101/24 brd 192.168.1.255 scope global ens33
+       valid_lft forever preferred_lft forever
+    inet6 fe80::20c:29ff:fe00:ab1f/64 scope link
+       valid_lft forever preferred_lft forever
+specxy@siemserver:~$ sudo systemctl status kibana.service
+[sudo] password for specxy:
+● kibana.service - Kibana
+     Loaded: loaded (/usr/lib/systemd/system/kibana.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 04:29:01 UTC; 23h ago
+       Docs: https://www.elastic.co
+   Main PID: 4220 (node)
+      Tasks: 11 (limit: 4888)
+     Memory: 561.4M (peak: 985.8M swap: 152.8M swap peak: 561.6M)
+        CPU: 15min 2.032s
+     CGroup: /system.slice/kibana.service
+             └─4220 /usr/share/kibana/bin/../node/glibc-217/bin/node /usr/share/kibana/bin/../src/cli/dist
+
+Sep 02 03:08:53 siemserver kibana[4220]: [2025-09-02T03:08:53.557+00:00][INFO ][plugins.fleet.fleet:unenroll-inactive-agents-task:1.0.1] [UnenrollInactiveAgentsTask] runTask ended: success
+Sep 02 03:13:53 siemserver kibana[4220]: [2025-09-02T03:13:53.602+00:00][INFO ][plugins.fleet] Fleet Usage: {"agents_enabled":true,"agents":{"total_enrolled":0,"healthy":0,"unhealthy":0,"offline":0,"inactive":0>
+Sep 02 03:18:53 siemserver kibana[4220]: [2025-09-02T03:18:53.572+00:00][INFO ][plugins.fleet.fleet:unenroll-inactive-agents-task:1.0.1] [runTask()] started
+Sep 02 03:18:53 siemserver kibana[4220]: [2025-09-02T03:18:53.601+00:00][INFO ][plugins.fleet.fleet:unenroll-inactive-agents-task:1.0.1] [UnenrollInactiveAgentsTask] runTask ended: success
+Sep 02 03:28:53 siemserver kibana[4220]: [2025-09-02T03:28:53.626+00:00][INFO ][plugins.fleet.fleet:unenroll-inactive-agents-task:1.0.1] [runTask()] started
+Sep 02 03:28:53 siemserver kibana[4220]: [2025-09-02T03:28:53.667+00:00][INFO ][plugins.fleet.fleet:unenroll-inactive-agents-task:1.0.1] [UnenrollInactiveAgentsTask] runTask ended: success
+Sep 02 03:28:53 siemserver kibana[4220]: [2025-09-02T03:28:53.674+00:00][INFO ][plugins.fleet] Fleet Usage: {"agents_enabled":true,"agents":{"total_enrolled":0,"healthy":0,"unhealthy":0,"offline":0,"inactive":0>
+Sep 02 03:38:53 siemserver kibana[4220]: [2025-09-02T03:38:53.719+00:00][INFO ][plugins.fleet.fleet:unenroll-inactive-agents-task:1.0.1] [runTask()] started
+Sep 02 03:38:53 siemserver kibana[4220]: [2025-09-02T03:38:53.746+00:00][INFO ][plugins.fleet.fleet:unenroll-inactive-agents-task:1.0.1] [UnenrollInactiveAgentsTask] runTask ended: success
+Sep 02 03:43:53 siemserver kibana[4220]: [2025-09-02T03:43:53.785+00:00][INFO ][plugins.fleet] Fleet Usage: {"agents_enabled":true,"agents":{"total_enrolled":0,"healthy":0,"unhealthy":0,"offline":0,"inactive":0>
+lines 1-21/21 (END)
+specxy@siemserver:~$ sudo systemctl status elasticsearch.service
+● elasticsearch.service - Elasticsearch
+     Loaded: loaded (/usr/lib/systemd/system/elasticsearch.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 04:29:45 UTC; 23h ago
+       Docs: https://www.elastic.co
+   Main PID: 4246 (java)
+      Tasks: 205 (limit: 4888)
+     Memory: 1.7G (peak: 2.6G swap: 1.0G swap peak: 2.0G)
+        CPU: 23min 57.696s
+     CGroup: /system.slice/elasticsearch.service
+             ├─4246 /usr/share/elasticsearch/jdk/bin/java -Xms4m -Xmx64m -XX:+UseSerialGC -Dcli.name=server -Dcli.script=/usr/share/elasticsearch/bin/elasticsearch -Dcli.libs=lib/tools/server-cli -Des.path.home>
+             ├─4314 /usr/share/elasticsearch/jdk/bin/java -Des.networkaddress.cache.ttl=60 -Des.networkaddress.cache.negative.ttl=10 -XX:+AlwaysPreTouch -Xss1m -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Dj>
+             └─4346 /usr/share/elasticsearch/modules/x-pack-ml/platform/linux-x86_64/bin/controller
+
+Sep 01 04:29:19 siemserver systemd[1]: Starting elasticsearch.service - Elasticsearch...
+Sep 01 04:29:45 siemserver systemd[1]: Started elasticsearch.service - Elasticsearch.
+
+specxy@siemserver:~$ sudo systemctl status filebeat.service
+● filebeat.service - Filebeat sends log files to Logstash or directly to Elasticsearch.
+     Loaded: loaded (/usr/lib/systemd/system/filebeat.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 08:35:55 UTC; 19h ago
+       Docs: https://www.elastic.co/beats/filebeat
+   Main PID: 6883 (filebeat)
+      Tasks: 14 (limit: 4888)
+     Memory: 45.4M (peak: 75.3M swap: 18.0M swap peak: 21.1M)
+        CPU: 14.055s
+     CGroup: /system.slice/filebeat.service
+             └─6883 /usr/share/filebeat/bin/filebeat --environment systemd -c /etc/filebeat/filebeat.yml --path.home /usr/share/filebeat --path.config /etc/filebeat --path.data /var/lib/filebeat --path.logs /va>
+
+Sep 02 03:43:14 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-02T03:43:14.549Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/l>
+Sep 02 03:43:44 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-02T03:43:44.549Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/l>
+Sep 02 03:44:14 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-02T03:44:14.549Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/l>
+Sep 02 03:44:44 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-02T03:44:44.549Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/l>
+Sep 02 03:45:14 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-02T03:45:14.549Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/l>
+Sep 02 03:45:44 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-02T03:45:44.547Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/l>
+Sep 02 03:46:14 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-02T03:46:14.548Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/l>
+Sep 02 03:46:44 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-02T03:46:44.549Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/l>
+Sep 02 03:47:14 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-02T03:47:14.549Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/l>
+Sep 02 03:47:44 siemserver filebeat[6883]: {"log.level":"info","@timestamp":"2025-09-02T03:47:44.548Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/l>
+
+specxy@siemserver:~$ sudo systemctl status wazuh-manager.service
+● wazuh-manager.service - Wazuh manager
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-manager.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 09:06:30 UTC; 18h ago
+    Process: 7142 ExecStart=/usr/bin/env /var/ossec/bin/wazuh-control start (code=exited, status=0/SUCCESS)
+      Tasks: 254 (limit: 4888)
+     Memory: 221.4M (peak: 2.2G swap: 331.8M swap peak: 335.1M)
+        CPU: 1h 26min 53.274s
+     CGroup: /system.slice/wazuh-manager.service
+             ├─7205 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─7206 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─7207 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─7210 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─7213 /var/ossec/framework/python/bin/python3 /var/ossec/api/scripts/wazuh_apid.py
+             ├─7255 /var/ossec/bin/wazuh-authd
+             ├─7270 /var/ossec/bin/wazuh-db
+             ├─7299 /var/ossec/bin/wazuh-execd
+             ├─7314 /var/ossec/bin/wazuh-analysisd
+             ├─7448 /var/ossec/bin/wazuh-syscheckd
+             ├─7463 /var/ossec/bin/wazuh-remoted
+             ├─7498 /var/ossec/bin/wazuh-logcollector
+             ├─7519 /var/ossec/bin/wazuh-monitord
+             └─7550 /var/ossec/bin/wazuh-modulesd
+
+Sep 01 09:06:23 siemserver env[7142]: Started wazuh-analysisd...
+Sep 01 09:06:24 siemserver env[7142]: Started wazuh-syscheckd...
+Sep 01 09:06:25 siemserver env[7142]: Started wazuh-remoted...
+Sep 01 09:06:26 siemserver env[7142]: Started wazuh-logcollector...
+Sep 01 09:06:27 siemserver env[7142]: Started wazuh-monitord...
+Sep 01 09:06:27 siemserver env[7547]: 2025/09/01 09:06:27 wazuh-modulesd:router: INFO: Loaded router module.
+Sep 01 09:06:27 siemserver env[7547]: 2025/09/01 09:06:27 wazuh-modulesd:content_manager: INFO: Loaded content_manager module.
+Sep 01 09:06:28 siemserver env[7142]: Started wazuh-modulesd...
+Sep 01 09:06:30 siemserver env[7142]: Completed.
+Sep 01 09:06:30 siemserver systemd[1]: Started wazuh-manager.service - Wazuh manager.
+specxy@siemserver:~$ ^C
+specxy@siemserver:~$ sudo systemctl status wazuh-dashboard.service
+● wazuh-dashboard.service - wazuh-dashboard
+     Loaded: loaded (/etc/systemd/system/wazuh-dashboard.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 09:14:26 UTC; 18h ago
+   Main PID: 11017 (node)
+      Tasks: 11 (limit: 4888)
+     Memory: 139.0M (peak: 286.0M swap: 41.1M swap peak: 100.2M)
+        CPU: 1min 12.002s
+     CGroup: /system.slice/wazuh-dashboard.service
+             └─11017 /usr/share/wazuh-dashboard/node/bin/node --no-warnings --max-http-header-size=65536 --unhandled-rejections=warn /usr/share/wazuh-dashboard/src/cli/dist
+
+Sep 02 03:48:09 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-02T03:48:09Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 02 03:48:12 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-02T03:48:12Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 02 03:48:14 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-02T03:48:14Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 02 03:48:17 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-02T03:48:17Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 02 03:48:19 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-02T03:48:19Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 02 03:48:22 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-02T03:48:22Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 02 03:48:24 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-02T03:48:24Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 02 03:48:27 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-02T03:48:27Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 02 03:48:29 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-02T03:48:29Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+Sep 02 03:48:32 siemserver opensearch-dashboards[11017]: {"type":"log","@timestamp":"2025-09-02T03:48:32Z","tags":["error","opensearch","data"],"pid":11017,"message":"[ResponseError]: Response Error"}
+specxy@siemserver:~$ ^C
+specxy@siemserver:~$ sudo systemctl status wazuh-indexer
+● wazuh-indexer.service - wazuh-indexer
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-indexer.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2025-09-01 06:31:34 UTC; 21h ago
+       Docs: https://documentation.wazuh.com
+   Main PID: 5360 (java)
+      Tasks: 114 (limit: 4888)
+     Memory: 589.3M (peak: 1.3G swap: 905.2M swap peak: 1.2G)
+        CPU: 7min 9.181s
+     CGroup: /system.slice/wazuh-indexer.service
+             └─5360 /usr/share/wazuh-indexer/jdk/bin/java -Xshare:auto -Dopensearch.networkaddress.cache.ttl=60 -Dopensearch.networkaddress.cache.negative.ttl=10 -XX:+AlwaysPreTouch -Xss1m -Djava.awt.headless=t>
+
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager has been called by org.opensearch.bootstrap.OpenSearch (file:/usr/share/wazuh-indexer/lib/opensearch-2.19.1.jar)
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: Please consider reporting this to the maintainers of org.opensearch.bootstrap.OpenSearch
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager will be removed in a future release
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: Sep 01, 2025 6:31:21 AM sun.util.locale.provider.LocaleProviderAdapter <clinit>
+Sep 01 06:31:21 siemserver systemd-entrypoint[5360]: WARNING: COMPAT locale provider will be removed in a future release
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: A terminally deprecated method in java.lang.System has been called
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager has been called by org.opensearch.bootstrap.Security (file:/usr/share/wazuh-indexer/lib/opensearch-2.19.1.jar)
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: Please consider reporting this to the maintainers of org.opensearch.bootstrap.Security
+Sep 01 06:31:22 siemserver systemd-entrypoint[5360]: WARNING: System::setSecurityManager will be removed in a future release
+Sep 01 06:31:34 siemserver systemd[1]: Started wazuh-indexer.service - wazuh-indexer.
+
+specxy@siemserver:~$ sudo systemctl status wazuh-indexer-performance-analyzer.service
+○ wazuh-indexer-performance-analyzer.service - OpenSearch Performance Analyzer
+     Loaded: loaded (/usr/lib/systemd/system/wazuh-indexer-performance-analyzer.service; disabled; preset: enabled)
+     Active: inactive (dead)
+specxy@siemserver:~$ nano /etc/wazuh-dashboard/opensearch_dashboards.yml
+specxy@siemserver:~$ sudo -i
+[sudo] password for specxy:
+root@siemserver:~# nano /etc/wazuh-dashboard/opensearch_dashboards.yml
+root@siemserver:~# sudo nano /etc/wazuh-dashboard/opensearch_dashboards.yml
+root@siemserver:~# sudo systemctl restart wazuh-dashboard
+sudo systemctl restart wazuh-indexer
+root@siemserver:~# sudo systemctl stop wazuh-indexer
+sudo systemctl disable wazuh-indexer
+Synchronizing state of wazuh-indexer.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install disable wazuh-indexer
+Removed "/etc/systemd/system/multi-user.target.wants/wazuh-indexer.service".
+root@siemserver:~# curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.19.3-amd64.deb
+sudo dpkg -i filebeat-8.19.3-amd64.deb
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 62.9M  100 62.9M    0     0  4456k      0  0:00:14  0:00:14 --:--:-- 5476k
+(Reading database ... 362042 files and directories currently installed.)
+Preparing to unpack filebeat-8.19.3-amd64.deb ...
+Unpacking filebeat (8.19.3) over (8.19.3) ...
+Setting up filebeat (8.19.3) ...
+root@siemserver:~# sudo nano /etc/filebeat/filebeat.yml
+root@siemserver:~# curl -so /tmp/wazuh-kibana.zip https://packages.wazuh.com/4.x/ui/kibana/wazuh-kibana-4.9.0.zip
+root@siemserver:~# cd /tmp/
+root@siemserver:/tmp# unzip wazuh-kibana.zip
+Archive:  wazuh-kibana.zip
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of wazuh-kibana.zip or
+        wazuh-kibana.zip.zip, and cannot find wazuh-kibana.zip.ZIP, period.
+root@siemserver:/tmp# ls -la
+total 116
+drwxrwxrwt 18 root   root    4096 Sep  2 06:12 .
+drwxr-xr-x 23 root   root    4096 Aug 30 09:46 ..
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .font-unix
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .ICE-unix
+drwx------  2 root   root    4096 Aug 30 09:31 snap-private-tmp
+drwx------  3 root   root    4096 Sep  1 04:29 systemd-private-48862b23c2df4bc6a03063fc6245be58-elasticsearch.service-dEgeqE
+drwx------  3 root   root    4096 Sep  1 10:55 systemd-private-48862b23c2df4bc6a03063fc6245be58-fwupd.service-YUaQ2Y
+drwx------  3 root   root    4096 Sep  1 04:29 systemd-private-48862b23c2df4bc6a03063fc6245be58-kibana.service-lT6rCU
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-ModemManager.service-ra60Ua
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-polkit.service-MRSarV
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-logind.service-Mtkn1H
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-resolved.service-uqUUqW
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-timesyncd.service-HlGeg9
+drwx------  3 root   root    4096 Aug 30 10:17 systemd-private-48862b23c2df4bc6a03063fc6245be58-upower.service-2eXcft
+drwx------  2 root   root    4096 Aug 30 09:31 vmware-root_865-3980167289
+drwxr--r--  2 root   root    4096 Sep  1 06:07 wazuh-certificates
+-rw-------  1 root   root     630 Sep  1 06:23 wazuh-certificates-tool.log
+-rwxrwxr-x  1 specxy specxy 36475 Sep  1 06:02 wazuh-certs-tool.sh
+-rw-r--r--  1 root   root     111 Sep  2 06:12 wazuh-kibana.zip
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .X11-unix
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .XIM-unix
+root@siemserver:/tmp# unzip wazuh-kibana.zip
+Archive:  wazuh-kibana.zip
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of wazuh-kibana.zip or
+        wazuh-kibana.zip.zip, and cannot find wazuh-kibana.zip.ZIP, period.
+root@siemserver:/tmp# unzip wazuh-kibana.zip
+Archive:  wazuh-kibana.zip
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of wazuh-kibana.zip or
+        wazuh-kibana.zip.zip, and cannot find wazuh-kibana.zip.ZIP, period.
+root@siemserver:/tmp# curl -so /tmp/wazuh-kibana.zip https://packages.wazuh.com/4.x/ui/kibana/wazuh-kibana-4.9.0.zip
+root@siemserver:/tmp# unzip wazuh-kibana.zip
+Archive:  wazuh-kibana.zip
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of wazuh-kibana.zip or
+        wazuh-kibana.zip.zip, and cannot find wazuh-kibana.zip.ZIP, period.
+root@siemserver:/tmp# ^C
+root@siemserver:/tmp# rm /tmp/wazuh-kibana.zip
+root@siemserver:/tmp# ls -la
+total 112
+drwxrwxrwt 18 root   root    4096 Sep  2 06:22 .
+drwxr-xr-x 23 root   root    4096 Aug 30 09:46 ..
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .font-unix
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .ICE-unix
+drwx------  2 root   root    4096 Aug 30 09:31 snap-private-tmp
+drwx------  3 root   root    4096 Sep  1 04:29 systemd-private-48862b23c2df4bc6a03063fc6245be58-elasticsearch.service-dEgeqE
+drwx------  3 root   root    4096 Sep  1 10:55 systemd-private-48862b23c2df4bc6a03063fc6245be58-fwupd.service-YUaQ2Y
+drwx------  3 root   root    4096 Sep  1 04:29 systemd-private-48862b23c2df4bc6a03063fc6245be58-kibana.service-lT6rCU
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-ModemManager.service-ra60Ua
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-polkit.service-MRSarV
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-logind.service-Mtkn1H
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-resolved.service-uqUUqW
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-timesyncd.service-HlGeg9
+drwx------  3 root   root    4096 Aug 30 10:17 systemd-private-48862b23c2df4bc6a03063fc6245be58-upower.service-2eXcft
+drwx------  2 root   root    4096 Aug 30 09:31 vmware-root_865-3980167289
+drwxr--r--  2 root   root    4096 Sep  1 06:07 wazuh-certificates
+-rw-------  1 root   root     630 Sep  1 06:23 wazuh-certificates-tool.log
+-rwxrwxr-x  1 specxy specxy 36475 Sep  1 06:02 wazuh-certs-tool.sh
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .X11-unix
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .XIM-unix
+root@siemserver:/tmp# curl -fso /tmp/wazuh-kibana.zip https://packages.wazuh.com/4.x/ui/kibana/wazuh-kibana-4.9.0.zip
+root@siemserver:/tmp# ls -la
+total 112
+drwxrwxrwt 18 root   root    4096 Sep  2 06:22 .
+drwxr-xr-x 23 root   root    4096 Aug 30 09:46 ..
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .font-unix
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .ICE-unix
+drwx------  2 root   root    4096 Aug 30 09:31 snap-private-tmp
+drwx------  3 root   root    4096 Sep  1 04:29 systemd-private-48862b23c2df4bc6a03063fc6245be58-elasticsearch.service-dEgeqE
+drwx------  3 root   root    4096 Sep  1 10:55 systemd-private-48862b23c2df4bc6a03063fc6245be58-fwupd.service-YUaQ2Y
+drwx------  3 root   root    4096 Sep  1 04:29 systemd-private-48862b23c2df4bc6a03063fc6245be58-kibana.service-lT6rCU
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-ModemManager.service-ra60Ua
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-polkit.service-MRSarV
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-logind.service-Mtkn1H
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-resolved.service-uqUUqW
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-timesyncd.service-HlGeg9
+drwx------  3 root   root    4096 Aug 30 10:17 systemd-private-48862b23c2df4bc6a03063fc6245be58-upower.service-2eXcft
+drwx------  2 root   root    4096 Aug 30 09:31 vmware-root_865-3980167289
+drwxr--r--  2 root   root    4096 Sep  1 06:07 wazuh-certificates
+-rw-------  1 root   root     630 Sep  1 06:23 wazuh-certificates-tool.log
+-rwxrwxr-x  1 specxy specxy 36475 Sep  1 06:02 wazuh-certs-tool.sh
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .X11-unix
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .XIM-unix
+root@siemserver:/tmp# ls -lh /tmp/wazuh-kibana.zip
+ls: cannot access '/tmp/wazuh-kibana.zip': No such file or directory
+root@siemserver:/tmp# curl -fso /tmp/wazuh-kibana.zip https://packages.wazuh.com/4.x/ui/kibana/wazuh-kibana-4.9.0.zip
+root@siemserver:/tmp# ls -lh /tmp/wazuh-kibana.zip
+ls: cannot access '/tmp/wazuh-kibana.zip': No such file or directory
+root@siemserver:/tmp# ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=127 time=89.8 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=127 time=83.9 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=127 time=84.7 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=127 time=84.7 ms
+^C
+--- 8.8.8.8 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 83.888/85.776/89.813/2.354 ms
+root@siemserver:/tmp# curl -fso /tmp/wazuh-kibana.zip https://packages.wazuh.com/4.x/ui/kibana/wazuh-kibana-4.9.0.zip
+root@siemserver:/tmp# ls
+snap-private-tmp                                                               systemd-private-48862b23c2df4bc6a03063fc6245be58-polkit.service-MRSarV             vmware-root_865-3980167289
+systemd-private-48862b23c2df4bc6a03063fc6245be58-elasticsearch.service-dEgeqE  systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-logind.service-Mtkn1H     wazuh-certificates
+systemd-private-48862b23c2df4bc6a03063fc6245be58-fwupd.service-YUaQ2Y          systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-resolved.service-uqUUqW   wazuh-certificates-tool.log
+systemd-private-48862b23c2df4bc6a03063fc6245be58-kibana.service-lT6rCU         systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-timesyncd.service-HlGeg9  wazuh-certs-tool.sh
+systemd-private-48862b23c2df4bc6a03063fc6245be58-ModemManager.service-ra60Ua   systemd-private-48862b23c2df4bc6a03063fc6245be58-upower.service-2eXcft
+root@siemserver:/tmp# curl -so /tmp/wazuh-kibana.zip https://packages.wazuh.com/4.x/ui/kibana/wazuh-kibana-4.9.0.zip
+root@siemserver:/tmp# ls -la
+total 116
+drwxrwxrwt 18 root   root    4096 Sep  2 06:24 .
+drwxr-xr-x 23 root   root    4096 Aug 30 09:46 ..
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .font-unix
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .ICE-unix
+drwx------  2 root   root    4096 Aug 30 09:31 snap-private-tmp
+drwx------  3 root   root    4096 Sep  1 04:29 systemd-private-48862b23c2df4bc6a03063fc6245be58-elasticsearch.service-dEgeqE
+drwx------  3 root   root    4096 Sep  1 10:55 systemd-private-48862b23c2df4bc6a03063fc6245be58-fwupd.service-YUaQ2Y
+drwx------  3 root   root    4096 Sep  1 04:29 systemd-private-48862b23c2df4bc6a03063fc6245be58-kibana.service-lT6rCU
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-ModemManager.service-ra60Ua
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-polkit.service-MRSarV
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-logind.service-Mtkn1H
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-resolved.service-uqUUqW
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-timesyncd.service-HlGeg9
+drwx------  3 root   root    4096 Aug 30 10:17 systemd-private-48862b23c2df4bc6a03063fc6245be58-upower.service-2eXcft
+drwx------  2 root   root    4096 Aug 30 09:31 vmware-root_865-3980167289
+drwxr--r--  2 root   root    4096 Sep  1 06:07 wazuh-certificates
+-rw-------  1 root   root     630 Sep  1 06:23 wazuh-certificates-tool.log
+-rwxrwxr-x  1 specxy specxy 36475 Sep  1 06:02 wazuh-certs-tool.sh
+-rw-r--r--  1 root   root     111 Sep  2 06:24 wazuh-kibana.zip
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .X11-unix
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .XIM-unix
+root@siemserver:/tmp# ls -lh /tmp/wazuh-kibana.zip
+-rw-r--r-- 1 root root 111 Sep  2 06:24 /tmp/wazuh-kibana.zip
+root@siemserver:/tmp# unzip /tmp/wazuh-kibana.zip -d /tmp/wazuh-dashboards
+Archive:  /tmp/wazuh-kibana.zip
+  End-of-central-directory signature not found.  Either this file is not
+  a zipfile, or it constitutes one disk of a multi-part archive.  In the
+  latter case the central directory and zipfile comment will be found on
+  the last disk(s) of this archive.
+unzip:  cannot find zipfile directory in one of /tmp/wazuh-kibana.zip or
+        /tmp/wazuh-kibana.zip.zip, and cannot find /tmp/wazuh-kibana.zip.ZIP, period.
+root@siemserver:/tmp# file wazuh-kibana.zip
+wazuh-kibana.zip: XML 1.0 document, ASCII text
+root@siemserver:/tmp# curl -o /tmp/wazuh_dashboards_4.6.0.ndjson https://raw.githubusercontent.com/wazuh/wazuh/4.6.0/extensions/kibana/wazuh-kibana-app/server/dashboards/wazuh_dashboards.ndjson
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    14  100    14    0     0     16      0 --:--:-- --:--:-- --:--:--    16
+root@siemserver:/tmp# file /tmp/wazuh_dashboards_4.6.0.ndjson
+/tmp/wazuh_dashboards_4.6.0.ndjson: ASCII text, with no line terminators
+root@siemserver:/tmp# ls -la
+total 120
+drwxrwxrwt 18 root   root    4096 Sep  2 06:32 .
+drwxr-xr-x 23 root   root    4096 Aug 30 09:46 ..
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .font-unix
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .ICE-unix
+drwx------  2 root   root    4096 Aug 30 09:31 snap-private-tmp
+drwx------  3 root   root    4096 Sep  1 04:29 systemd-private-48862b23c2df4bc6a03063fc6245be58-elasticsearch.service-dEgeqE
+drwx------  3 root   root    4096 Sep  1 10:55 systemd-private-48862b23c2df4bc6a03063fc6245be58-fwupd.service-YUaQ2Y
+drwx------  3 root   root    4096 Sep  1 04:29 systemd-private-48862b23c2df4bc6a03063fc6245be58-kibana.service-lT6rCU
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-ModemManager.service-ra60Ua
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-polkit.service-MRSarV
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-logind.service-Mtkn1H
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-resolved.service-uqUUqW
+drwx------  3 root   root    4096 Aug 30 09:31 systemd-private-48862b23c2df4bc6a03063fc6245be58-systemd-timesyncd.service-HlGeg9
+drwx------  3 root   root    4096 Aug 30 10:17 systemd-private-48862b23c2df4bc6a03063fc6245be58-upower.service-2eXcft
+drwx------  2 root   root    4096 Aug 30 09:31 vmware-root_865-3980167289
+drwxr--r--  2 root   root    4096 Sep  1 06:07 wazuh-certificates
+-rw-------  1 root   root     630 Sep  1 06:23 wazuh-certificates-tool.log
+-rwxrwxr-x  1 specxy specxy 36475 Sep  1 06:02 wazuh-certs-tool.sh
+-rw-r--r--  1 root   root      14 Sep  2 06:32 wazuh_dashboards_4.6.0.ndjson
+-rw-r--r--  1 root   root     111 Sep  2 06:24 wazuh-kibana.zip
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .X11-unix
+drwxrwxrwt  2 root   root    4096 Aug 30 09:31 .XIM-unix
+root@siemserver:/tmp# curl -XPOST "http://192.168.1.101:5601/api/saved_objects/_import?overwrite=true" -H "kbn-xsrf: true" --form file=@/tmp/wazuh_dashboards_4.6.0.ndjson
+{"statusCode":401,"error":"Unauthorized","message":"Unauthorized"}root@siemserver:/tmp#
+root@siemserver:/tmp#
+root@siemserver:/tmp# curl -XPOST "http://192.168.1.101:5601/api/saved_objects/_import?overwrite=true" \
+-u elastic \
+-H "kbn-xsrf: true" \
+--form file=@/tmp/wazuh_dashboards_4.6.0.ndjson
+Enter host password for user 'elastic':
+root@siemserver:/tmp# curl -XPOST "http://192.168.1.101:5601/api/saved_objects/_import?overwrite=true" \
+-u specxy \
+-H "kbn-xsrf: true" \
+--form file=@/tmp/wazuh_dashboards_4.6.0.ndjson
+Enter host password for user 'specxy':
+{"statusCode":400,"errsed -i '/^$/d' /tmp/wazuh_dashboards_4.6.0.ndjsonspace character after JSON at position 3 (line 1 column 4)"}root@siemserver:/tmp# sed -i '/^$/d' /tmp/wazuh_dashboards_4.6.0.ndjson
+root@siemserver:/tmp#
+root@siemserver:/tmp# curl -XPOST "http://192.168.1.101:5601/api/saved_objects/_import?overwrite=true" \
+-u specxy \
+-H "kbn-xsrf: true" \
+--form file=@/tmp/wazuh_dashboards_4.6.0.ndjson
+Enter host password for user 'specxy':
+root@siemserver:/tmp# curl -L https://raw.githubusercontent.com/wazuh/wazuh/4.6.0/extensions/kibana/wazuh-kibana-app/server/dashboards/wazuh_dashboards.ndjson | tr -d '\r' > /tmp/wazuh_dashboards_4.6.0.ndjson.cleaned
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    14  100    14    0     0     17      0 --:--:-- --:--:-- --:--:--    17
+root@siemserver:/tmp# file /tmp/wazuh_dashboards_4.6.0.ndjson.cleaned
+/tmp/wazuh_dashboards_4.6.0.ndjson.cleaned: ASCII text, with no line terminators
+root@siemserver:/tmp# curl -XPOST "http://192.168.1.101:5601/api/saved_objects/_import?overwrite=true" \
+-u specxy \
+-H "kbn-xsrf: true" \
+--form file=@/tmp/wazuh_dashboards_4.6.0.ndjson.cleaned
+Enter host password for user 'specxy':
+{"statusCode":400,"error":"Bad Request","message":"Invalid file extension .cleaned"}root@siemserver:/tmp# exit
+logout
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$ nano /etc/wazuh-dashboard/opensearch_dashboards.yml
+specxy@siemserver:~$ curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.19.3-amd64.deb
+sudo dpkg -i filebeat-8.19.3-amd64.deb
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 62.9M  100 62.9M    0     0  2951k      0  0:00:21  0:00:21 --:--:-- 3347k
+[sudo] password for specxy:
+(Reading database ... 362042 files and directories currently installed.)
+Preparing to unpack filebeat-8.19.3-amd64.deb ...
+Unpacking filebeat (8.19.3) over (8.19.3) ...
+Setting up filebeat (8.19.3) ...
+specxy@siemserver:~$ curl -s https://packages.wazuh.com/4.x/filebeat/wazuh-filebeat-0.3.tar.gz -o /tmp/wazuh-filebeat.tar.gz
+sudo tar -xvzf /tmp/wazuh-filebeat.tar.gz -C /usr/share/filebeat/module
+wazuh/
+wazuh/archives/
+wazuh/archives/ingest/
+wazuh/archives/ingest/pipeline.json
+wazuh/archives/config/
+wazuh/archives/config/archives.yml
+wazuh/archives/manifest.yml
+wazuh/_meta/
+wazuh/_meta/config.yml
+wazuh/_meta/docs.asciidoc
+wazuh/_meta/fields.yml
+wazuh/alerts/
+wazuh/alerts/ingest/
+wazuh/alerts/ingest/pipeline.json
+wazuh/alerts/config/
+wazuh/alerts/config/alerts.yml
+wazuh/alerts/manifest.yml
+wazuh/module.yml
+specxy@siemserver:~$ sudo nano /etc/filebeat/filebeat.yml
+specxy@siemserver:~$ sudo nano /etc/filebeat/filebeat.yml
+specxy@siemserver:~$ specxy@siemserver:~$
+specxy@siemserver:~$
+specxy@siemserver:~$ sudo filebeat modules enable wazuh
+Module wazuh doesn't exist!
+specxy@siemserver:~$ sudo filebeat modules list | grep -i wazuh
+sudo filebeat modules enable wazuh
+Module wazuh doesn't exist!
+specxy@siemserver:~$ sudo nano /etc/filebeat/filebeat.yml
+[sudo] password for specxy:
+specxy@siemserver:~$ sudo filebeat test config
+[sudo] password for specxy:
+Config OK
+specxy@siemserver:~$ sudo filebeat test output
+elasticsearch: https://192.168.1.101:9200...
+  parse url... OK
+  connection...
+    parse host... OK
+    dns lookup... OK
+    addresses: 192.168.1.101
+    dial up... OK
+  TLS...
+    security: server's certificate chain verification is enabled
+    handshake... OK
+    TLS version: TLSv1.3
+    dial up... OK
+  talk to server... OK
+  version: 8.19.3
+specxy@siemserver:~$ sudo systemctl restart filebeat
+specxy@siemserver:~$ sudo systemctl status filebeat.service
+● filebeat.service - Filebeat sends log files to Logstash or directly to Elasticsearch.
+     Loaded: loaded (/usr/lib/systemd/system/filebeat.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2025-09-02 09:30:58 UTC; 8s ago
+       Docs: https://www.elastic.co/beats/filebeat
+   Main PID: 19451 (filebeat)
+      Tasks: 12 (limit: 4888)
+     Memory: 54.6M (peak: 55.2M)
+        CPU: 210ms
+     CGroup: /system.slice/filebeat.service
+             └─19451 /usr/share/filebeat/bin/filebeat --environment systemd -c /etc/filebeat/filebeat.yml --path.home /usr/share/filebeat --path.config /etc/filebeat --path.data /var/lib/filebeat --path.logs /v>
+
+Sep 02 09:30:58 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T09:30:58.905Z","log.logger":"filebeat","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/statestore/backend/m>
+Sep 02 09:30:58 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T09:30:58.907Z","log.logger":"registrar","log.origin":{"function":"github.com/elastic/beats/v7/filebeat/registrar.(*Regist>
+Sep 02 09:30:58 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T09:30:58.907Z","log.logger":"crawler","log.origin":{"function":"github.com/elastic/beats/v7/filebeat/beater.(*crawler).St>
+Sep 02 09:30:58 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T09:30:58.910Z","log.logger":"crawler","log.origin":{"function":"github.com/elastic/beats/v7/filebeat/beater.(*crawler).st>
+Sep 02 09:30:58 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T09:30:58.910Z","log.logger":"crawler","log.origin":{"function":"github.com/elastic/beats/v7/filebeat/beater.(*crawler).St>
+Sep 02 09:30:58 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T09:30:58.910Z","log.logger":"input.filestream","log.origin":{"function":"github.com/elastic/beats/v7/filebeat/input/v2/co>
+Sep 02 09:30:58 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T09:30:58.910Z","log.logger":"input.filestream.metric_registry","log.origin":{"function":"github.com/elastic/beats/v7/libb>
+Sep 02 09:30:58 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T09:30:58.910Z","log.logger":"crawler","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/cfgfile.(*Reloader).R>
+Sep 02 09:30:58 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T09:30:58.911Z","log.logger":"crawler","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/cfgfile.(*Reloader).R>
+Sep 02 09:31:01 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T09:31:01.890Z","log.logger":"processors.add_cloud_metadata","log.origin":{"function":"github.com/elastic/beats/v7/libbeat>
+
+specxy@siemserver:~$ ls -l /var/ossec/logs/alerts/alerts.json*
+sudo tail -f /var/log/filebeat/filebeat
+ls: cannot access '/var/ossec/logs/alerts/alerts.json*': Permission denied
+tail: cannot open '/var/log/filebeat/filebeat' for reading: No such file or directory
+tail: no files remaining
+specxy@siemserver:~$ sudo -i
+root@siemserver:~# ls -l /var/ossec/logs/alerts/alerts.json*
+sudo tail -f /var/log/filebeat/filebeat
+-rw-r----- 2 wazuh wazuh 98592 Sep  2 09:31 /var/ossec/logs/alerts/alerts.json
+tail: cannot open '/var/log/filebeat/filebeat' for reading: No such file or directory
+tail: no files remaining
+root@siemserver:~# exit
+logout
+specxy@siemserver:~$ url -u elastic:<pass> -k "https://192.168.1.101:9200/_cat/indices/wazuh-alerts-*?v"
+-bash: pass: No such file or directory
+specxy@siemserver:~$ curl -u elastic:<pass> -k "https://192.168.1.101:9200/_search?q=agent.name:wazuh*&size=1&pretty"
+-bash: pass: No such file or directory
+specxy@siemserver:~$ ls -lh /var/ossec/logs/alerts/alerts.json*
+ls: cannot access '/var/ossec/logs/alerts/alerts.json*': Permission denied
+specxy@siemserver:~$ sudo i
+[sudo] password for specxy:
+Sorry, try again.
+[sudo] password for specxy:
+sudo: 1 incorrect password attempt
+specxy@siemserver:~$ sudo -i
+[sudo] password for specxy:
+root@siemserver:~# ls -lh /var/ossec/logs/alerts/alerts.json*
+-rw-r----- 2 wazuh wazuh 104K Sep  2 10:16 /var/ossec/logs/alerts/alerts.json
+root@siemserver:~# tail -f /var/ossec/logs/alerts/alerts.json
+{"timestamp":"2025-09-02T09:31:39.532+0000","rule":{"level":3,"description":"Successful sudo to ROOT executed.","id":"5402","mitre":{"id":["T1548.003"],"tactic":["Privilege Escalation","Defense Evasion"],"technique":["Sudo and Sudo Caching"]},"firedtimes":7,"mail":false,"groups":["syslog","sudo"],"pci_dss":["10.2.5","10.2.2"],"gpg13":["7.6","7.8","7.13"],"gdpr":["IV_32.2"],"hipaa":["164.312.b"],"nist_800_53":["AU.14","AC.7","AC.6"],"tsc":["CC6.8","CC7.2","CC7.3"]},"agent":{"id":"000","name":"siemserver"},"manager":{"name":"siemserver"},"id":"1756805499.50793","full_log":"Sep 02 09:31:37 siemserver sudo[19552]:   specxy : TTY=pts/2 ; PWD=/root ; USER=root ; COMMAND=/bin/bash","predecoder":{"program_name":"sudo","timestamp":"Sep 02 09:31:37","hostname":"siemserver"},"decoder":{"parent":"sudo","name":"sudo","ftscomment":"First time user executed the sudo command"},"data":{"srcuser":"specxy","dstuser":"root","tty":"pts/2","pwd":"/root","command":"/bin/bash"},"location":"journald"}
+{"timestamp":"2025-09-02T09:31:39.532+0000","rule":{"level":3,"description":"PAM: Login session opened.","id":"5501","mitre":{"id":["T1078"],"tactic":["Defense Evasion","Persistence","Privilege Escalation","Initial Access"],"technique":["Valid Accounts"]},"firedtimes":7,"mail":false,"groups":["pam","syslog","authentication_success"],"pci_dss":["10.2.5"],"gpg13":["7.8","7.9"],"gdpr":["IV_32.2"],"hipaa":["164.312.b"],"nist_800_53":["AU.14","AC.7"],"tsc":["CC6.8","CC7.2","CC7.3"]},"agent":{"id":"000","name":"siemserver"},"manager":{"name":"siemserver"},"id":"1756805499.51267","full_log":"Sep 02 09:31:37 siemserver sudo[19552]: pam_unix(sudo-i:session): session opened for user root(uid=0) by specxy(uid=1000)","predecoder":{"program_name":"sudo","timestamp":"Sep 02 09:31:37","hostname":"siemserver"},"decoder":{"parent":"pam","name":"pam"},"data":{"srcuser":"specxy","dstuser":"root(uid=0)","uid":"1000"},"location":"journald"}
+{"timestamp":"2025-09-02T09:31:47.542+0000","rule":{"level":3,"description":"Successful sudo to ROOT executed.","id":"5402","mitre":{"id":["T1548.003"],"tactic":["Privilege Escalation","Defense Evasion"],"technique":["Sudo and Sudo Caching"]},"firedtimes":8,"mail":false,"groups":["syslog","sudo"],"pci_dss":["10.2.5","10.2.2"],"gpg13":["7.6","7.8","7.13"],"gdpr":["IV_32.2"],"hipaa":["164.312.b"],"nist_800_53":["AU.14","AC.7","AC.6"],"tsc":["CC6.8","CC7.2","CC7.3"]},"agent":{"id":"000","name":"siemserver"},"manager":{"name":"siemserver"},"id":"1756805507.51706","full_log":"Sep 02 09:31:46 siemserver sudo[19566]:     root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/tail -f /var/log/filebeat/filebeat","predecoder":{"program_name":"sudo","timestamp":"Sep 02 09:31:46","hostname":"siemserver"},"decoder":{"parent":"sudo","name":"sudo","ftscomment":"First time user executed the sudo command"},"data":{"srcuser":"root","dstuser":"root","tty":"pts/0","pwd":"/root","command":"/usr/bin/tail -f /var/log/filebeat/filebeat"},"location":"journald"}
+{"timestamp":"2025-09-02T09:31:47.543+0000","rule":{"level":3,"description":"PAM: Login session opened.","id":"5501","mitre":{"id":["T1078"],"tactic":["Defense Evasion","Persistence","Privilege Escalation","Initial Access"],"technique":["Valid Accounts"]},"firedtimes":8,"mail":false,"groups":["pam","syslog","authentication_success"],"pci_dss":["10.2.5"],"gpg13":["7.8","7.9"],"gdpr":["IV_32.2"],"hipaa":["164.312.b"],"nist_800_53":["AU.14","AC.7"],"tsc":["CC6.8","CC7.2","CC7.3"]},"agent":{"id":"000","name":"siemserver"},"manager":{"name":"siemserver"},"id":"1756805507.52248","full_log":"Sep 02 09:31:46 siemserver sudo[19566]: pam_unix(sudo:session): session opened for user root(uid=0) by specxy(uid=0)","predecoder":{"program_name":"sudo","timestamp":"Sep 02 09:31:46","hostname":"siemserver"},"decoder":{"parent":"pam","name":"pam"},"data":{"srcuser":"specxy","dstuser":"root(uid=0)","uid":"0"},"location":"journald"}
+{"timestamp":"2025-09-02T09:31:47.543+0000","rule":{"level":3,"description":"PAM: Login session closed.","id":"5502","firedtimes":7,"mail":false,"groups":["pam","syslog"],"pci_dss":["10.2.5"],"gpg13":["7.8","7.9"],"gdpr":["IV_32.2"],"hipaa":["164.312.b"],"nist_800_53":["AU.14","AC.7"],"tsc":["CC6.8","CC7.2","CC7.3"]},"agent":{"id":"000","name":"siemserver"},"manager":{"name":"siemserver"},"id":"1756805507.52679","full_log":"Sep 02 09:31:46 siemserver sudo[19566]: pam_unix(sudo:session): session closed for user root","predecoder":{"program_name":"sudo","timestamp":"Sep 02 09:31:46","hostname":"siemserver"},"decoder":{"parent":"pam","name":"pam"},"data":{"dstuser":"root"},"location":"journald"}
+{"timestamp":"2025-09-02T09:32:07.572+0000","rule":{"level":3,"description":"PAM: Login session closed.","id":"5502","firedtimes":8,"mail":false,"groups":["pam","syslog"],"pci_dss":["10.2.5"],"gpg13":["7.8","7.9"],"gdpr":["IV_32.2"],"hipaa":["164.312.b"],"nist_800_53":["AU.14","AC.7"],"tsc":["CC6.8","CC7.2","CC7.3"]},"agent":{"id":"000","name":"siemserver"},"manager":{"name":"siemserver"},"id":"1756805527.53049","full_log":"Sep 02 09:32:07 siemserver sudo[19552]: pam_unix(sudo-i:session): session closed for user root","predecoder":{"program_name":"sudo","timestamp":"Sep 02 09:32:07","hostname":"siemserver"},"decoder":{"parent":"pam","name":"pam"},"data":{"dstuser":"root"},"location":"journald"}
+{"timestamp":"2025-09-02T10:15:50.988+0000","rule":{"level":5,"description":"PAM: User login failed.","id":"5503","mitre":{"id":["T1110.001"],"tactic":["Credential Access"],"technique":["Password Guessing"]},"firedtimes":1,"mail":false,"groups":["pam","syslog","authentication_failed"],"pci_dss":["10.2.4","10.2.5"],"gpg13":["7.8"],"gdpr":["IV_35.7.d","IV_32.2"],"hipaa":["164.312.b"],"nist_800_53":["AU.14","AC.7"],"tsc":["CC6.1","CC6.8","CC7.2","CC7.3"]},"agent":{"id":"000","name":"siemserver"},"manager":{"name":"siemserver"},"id":"1756808150.53421","full_log":"Sep 02 10:15:49 siemserver sudo[19721]: pam_unix(sudo:auth): authentication failure; logname=specxy uid=1000 euid=0 tty=/dev/pts/2 ruser=specxy rhost=  user=specxy","predecoder":{"program_name":"sudo","timestamp":"Sep 02 10:15:49","hostname":"siemserver"},"decoder":{"name":"pam"},"data":{"srcuser":"specxy","dstuser":"specxy","logname":"specxy","uid":"1000","euid":"0","tty":"/dev/pts/2"},"location":"journald"}
+{"timestamp":"2025-09-02T10:15:54.995+0000","rule":{"level":5,"description":"Failed attempt to run sudo.","id":"5401","mitre":{"id":["T1548.003"],"tactic":["Privilege Escalation","Defense Evasion"],"technique":["Sudo and Sudo Caching"]},"firedtimes":1,"mail":false,"groups":["syslog","sudo"],"pci_dss":["10.2.4","10.2.5"],"gpg13":["7.8"],"gdpr":["IV_35.7.d","IV_32.2"],"hipaa":["164.312.b"],"nist_800_53":["AU.14","AC.7"],"tsc":["CC6.1","CC6.8","CC7.2","CC7.3"]},"agent":{"id":"000","name":"siemserver"},"manager":{"name":"siemserver"},"id":"1756808154.53963","full_log":"Sep 02 10:15:54 siemserver sudo[19721]:   specxy : 1 incorrect password attempt ; TTY=pts/2 ; PWD=/home/specxy ; USER=root ; COMMAND=i","predecoder":{"program_name":"sudo","timestamp":"Sep 02 10:15:54","hostname":"siemserver"},"decoder":{"parent":"sudo","name":"sudo","ftscomment":"First time user executed the sudo command"},"data":{"srcuser":"specxy","dstuser":"root","tty":"pts/2","pwd":"/home/specxy","command":"i"},"location":"journald"}
+{"timestamp":"2025-09-02T10:16:05.007+0000","rule":{"level":3,"description":"PAM: Login session opened.","id":"5501","mitre":{"id":["T1078"],"tactic":["Defense Evasion","Persistence","Privilege Escalation","Initial Access"],"technique":["Valid Accounts"]},"firedtimes":1,"mail":false,"groups":["pam","syslog","authentication_success"],"pci_dss":["10.2.5"],"gpg13":["7.8","7.9"],"gdpr":["IV_32.2"],"hipaa":["164.312.b"],"nist_800_53":["AU.14","AC.7"],"tsc":["CC6.8","CC7.2","CC7.3"]},"agent":{"id":"000","name":"siemserver"},"manager":{"name":"siemserver"},"id":"1756808165.54447","full_log":"Sep 02 10:16:03 siemserver sudo[19722]: pam_unix(sudo-i:session): session opened for user root(uid=0) by specxy(uid=1000)","predecoder":{"program_name":"sudo","timestamp":"Sep 02 10:16:03","hostname":"siemserver"},"decoder":{"parent":"pam","name":"pam"},"data":{"srcuser":"specxy","dstuser":"root(uid=0)","uid":"1000"},"location":"journald"}
+{"timestamp":"2025-09-02T10:16:05.007+0000","rule":{"level":3,"description":"Successful sudo to ROOT executed.","id":"5402","mitre":{"id":["T1548.003"],"tactic":["Privilege Escalation","Defense Evasion"],"technique":["Sudo and Sudo Caching"]},"firedtimes":1,"mail":false,"groups":["syslog","sudo"],"pci_dss":["10.2.5","10.2.2"],"gpg13":["7.6","7.8","7.13"],"gdpr":["IV_32.2"],"hipaa":["164.312.b"],"nist_800_53":["AU.14","AC.7","AC.6"],"tsc":["CC6.8","CC7.2","CC7.3"]},"agent":{"id":"000","name":"siemserver"},"manager":{"name":"siemserver"},"id":"1756808165.54886","full_log":"Sep 02 10:16:03 siemserver sudo[19722]:   specxy : TTY=pts/2 ; PWD=/root ; USER=root ; COMMAND=/bin/bash","predecoder":{"program_name":"sudo","timestamp":"Sep 02 10:16:03","hostname":"siemserver"},"decoder":{"parent":"sudo","name":"sudo","ftscomment":"First time user executed the sudo command"},"data":{"srcuser":"specxy","dstuser":"root","tty":"pts/2","pwd":"/root","command":"/bin/bash"},"location":"journald"}
+^C
+root@siemserver:~# sudo systemctl status filebeat
+● filebeat.service - Filebeat sends log files to Logstash or directly to Elasticsearch.
+     Loaded: loaded (/usr/lib/systemd/system/filebeat.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2025-09-02 09:30:58 UTC; 45min ago
+       Docs: https://www.elastic.co/beats/filebeat
+   Main PID: 19451 (filebeat)
+      Tasks: 12 (limit: 4888)
+     Memory: 52.2M (peak: 89.2M)
+        CPU: 2.406s
+     CGroup: /system.slice/filebeat.service
+             └─19451 /usr/share/filebeat/bin/filebeat --environment systemd -c /etc/filebeat/filebeat.yml --path.home /usr/share/filebeat --path.config /etc/filebeat --path.data /var/lib/filebeat --path.logs /v>
+
+Sep 02 10:11:58 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T10:11:58.902Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/>
+Sep 02 10:12:28 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T10:12:28.906Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/>
+Sep 02 10:12:58 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T10:12:58.904Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/>
+Sep 02 10:13:28 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T10:13:28.900Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/>
+Sep 02 10:13:58 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T10:13:58.901Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/>
+Sep 02 10:14:28 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T10:14:28.901Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/>
+Sep 02 10:14:58 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T10:14:58.905Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/>
+Sep 02 10:15:28 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T10:15:28.903Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/>
+Sep 02 10:15:58 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T10:15:58.909Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/>
+Sep 02 10:16:28 siemserver filebeat[19451]: {"log.level":"info","@timestamp":"2025-09-02T10:16:28.902Z","log.logger":"monitoring","log.origin":{"function":"github.com/elastic/beats/v7/libbeat/monitoring/report/>
+
+root@siemserver:~# sudo tail -f /var/log/filebeat/filebeat
+tail: cannot open '/var/log/filebeat/filebeat' for reading: No such file or directory
+tail: no files remaining
+root@siemserver:~# sudo filebeat test config
+sudo filebeat test output
+Config OK
+elasticsearch: https://192.168.1.101:9200...
+  parse url... OK
+  connection...
+    parse host... OK
+    dns lookup... OK
+    addresses: 192.168.1.101
+    dial up... OK
+  TLS...
+    security: server's certificate chain verification is enabled
+    handshake... OK
+    TLS version: TLSv1.3
+    dial up... OK
+  talk to server... OK
+  version: 8.19.3
+root@siemserver:~# curl -u specxy:sp3cxy -k "https://192.168.1.101:9200/_cat/indices?v"
+health status index                                                              uuid                   pri rep docs.count docs.deleted store.size pri.store.size dataset.size
+green  open   .internal.alerts-transform.health.alerts-default-000001            mWfrbArkSnSk_SB0gOtnDQ   1   0          0            0       249b           249b         249b
+green  open   .internal.alerts-observability.logs.alerts-default-000001          KcTaIHjWQKyY1x6wUcuC8g   1   0          0            0       249b           249b         249b
+green  open   .internal.alerts-observability.uptime.alerts-default-000001        fNfDhli1RUeOjBhR2w7I3A   1   0          0            0       249b           249b         249b
+yellow open   .ds-wazuh-alerts-2025.09.02-2025.09.02-000001                      5TQUfj-ETh6VkGbZWYReBA   1   1        122            0    356.4kb        356.4kb      356.4kb
+green  open   .internal.alerts-ml.anomaly-detection.alerts-default-000001        AMTpb3zXS7qJHKRA5c83Gw   1   0          0            0       249b           249b         249b
+green  open   .internal.alerts-observability.slo.alerts-default-000001           U3hkRFnxSli5VivLb5lCiw   1   0          0            0       249b           249b         249b
+green  open   .internal.alerts-default.alerts-default-000001                     qUYyOwVRQz-1r6zKI0BW-A   1   0          0            0       249b           249b         249b
+green  open   .internal.alerts-streams.alerts-default-000001                     1dsMg7R4Szmu8FqHyQ2KoQ   1   0          0            0       249b           249b         249b
+green  open   .internal.alerts-observability.apm.alerts-default-000001           CKQDn1_4TuCfZ5qY4bWAxg   1   0          0            0       249b           249b         249b
+green  open   .internal.alerts-security.attack.discovery.alerts-default-000001   CgM5D2VJSAiTApBdMGt2qA   1   0          0            0       249b           249b         249b
+yellow open   .ds-filebeat-8.19.2-2025.08.27-000001                              SSEHp6OySgGQBHfB5m7ZHw   1   1      22070            0      4.2mb          4.2mb        4.2mb
+green  open   .internal.alerts-observability.metrics.alerts-default-000001       YRAhNrTxSgmerWfsufBUYg   1   0          0            0       249b           249b         249b
+green  open   .internal.alerts-ml.anomaly-detection-health.alerts-default-000001 Q60C074GStiUrs3gX-cVDg   1   0          0            0       249b           249b         249b
+green  open   .internal.alerts-observability.threshold.alerts-default-000001     75BgMqy6QC6h8ePB8ZKWvg   1   0          0            0       249b           249b         249b
+green  open   .internal.alerts-security.alerts-default-000001                    0ccoH09DQfWxVU_vEM27OA   1   0          0            0       249b           249b         249b
+green  open   .internal.alerts-dataset.quality.alerts-default-000001             ifb5P6snRe6VhYflVBCcFg   1   0          0            0       249b           249b         249b
+green  open   .internal.alerts-stack.alerts-default-000001                       RC6EWtcKQLGMu8bjHszd9w   1   0          0            0       249b           249b         249b
+yellow open   .ds-filebeat-8.19.3-2025.08.30-000001                              jtUpdai_R3i7U8-JYiQd8A   1   1        895            0    926.7kb        926.7kb      926.7kb
+root@siemserver:~# curl -u specxy:sp3cxy -k "https://192.168.1.101:9200/wazuh-alerts-*/_search?size=1&pretty"
+{
+  "took" : 3,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 122,
+      "relation" : "eq"
+    },
+    "max_score" : 1.0,
+    "hits" : [
+      {
+        "_index" : ".ds-wazuh-alerts-2025.09.02-2025.09.02-000001",
+        "_id" : "59PwCZkBkH6b3FU2NCEL",
+        "_score" : 1.0,
+        "_source" : {
+          "@timestamp" : "2025-09-02T10:19:10.955Z",
+          "location" : "journald",
+          "rule" : {
+            "id" : "5402",
+            "mail" : false,
+            "hipaa" : [
+              "164.312.b"
+            ],
+            "groups" : [
+              "syslog",
+              "sudo"
+            ],
+            "pci_dss" : [
+              "10.2.5",
+              "10.2.2"
+            ],
+            "tsc" : [
+              "CC6.8",
+              "CC7.2",
+              "CC7.3"
+            ],
+            "description" : "Successful sudo to ROOT executed.",
+            "mitre" : {
+              "id" : [
+                "T1548.003"
+              ],
+              "tactic" : [
+                "Privilege Escalation",
+                "Defense Evasion"
+              ],
+              "technique" : [
+                "Sudo and Sudo Caching"
+              ]
+            },
+            "firedtimes" : 4,
+            "gpg13" : [
+              "7.6",
+              "7.8",
+              "7.13"
+            ],
+            "gdpr" : [
+              "IV_32.2"
+            ],
+            "level" : 3,
+            "nist_800_53" : [
+              "AU.14",
+              "AC.7",
+              "AC.6"
+            ]
+          },
+          "agent" : {
+            "ephemeral_id" : "d8ceb17e-87ec-4ce2-9eac-875be63e284c",
+            "id" : "000",
+            "name" : "siemserver",
+            "type" : "filebeat",
+            "version" : "8.19.3"
+          },
+          "id" : "1756808349.58028",
+          "predecoder" : {
+            "program_name" : "sudo",
+            "timestamp" : "Sep 02 10:19:08",
+            "hostname" : "siemserver"
+          },
+          "data" : {
+            "srcuser" : "root",
+            "dstuser" : "root",
+            "tty" : "pts/0",
+            "pwd" : "/root",
+            "command" : "/usr/bin/filebeat test config"
+          },
+          "full_log" : "Sep 02 10:19:08 siemserver sudo[19758]:     root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/filebeat test config",
+          "decoder" : {
+            "name" : "sudo",
+            "ftscomment" : "First time user executed the sudo command",
+            "parent" : "sudo"
+          },
+          "manager" : {
+            "name" : "siemserver"
+          },
+          "log" : {
+            "offset" : 111256,
+            "file" : {
+              "path" : "/var/ossec/logs/alerts/alerts.json",
+              "device_id" : "64512",
+              "inode" : "1232000"
+            }
+          },
+          "timestamp" : "2025-09-02T10:19:09.260+0000",
+          "input" : {
+            "type" : "filestream"
+          },
+          "host" : {
+            "ip" : [
+              "192.168.1.101",
+              "fe80::20c:29ff:fe00:ab1f"
+            ],
+            "name" : "siemserver",
+            "mac" : [
+              "00-0C-29-00-AB-1F"
+            ],
+            "hostname" : "siemserver",
+            "architecture" : "x86_64",
+            "os" : {
+              "codename" : "noble",
+              "type" : "linux",
+              "platform" : "ubuntu",
+              "version" : "24.04.3 LTS (Noble Numbat)",
+              "family" : "debian",
+              "name" : "Ubuntu",
+              "kernel" : "6.8.0-79-generic"
+            },
+            "id" : "20b0a086cf044ef3a407841e41c3fa31",
+            "containerized" : false
+          },
+          "ecs" : {
+            "version" : "8.0.0"
+          }
+        }
+      }
+    ]
+  }
+}
+root@siemserver:~# ^C
+root@siemserver:~# client_loop: send disconnect: Connection reset
+
+C:\Windows\System32>
